@@ -3,14 +3,14 @@ option java_multiple_files = true;
 package GRPC.shelf;
 
 service Shelves {
-  rpc GetShelf(SearchShelfParametersProto) returns (Shelf);
+  rpc GetShelf(SearchShelfParametersProto) returns (ShelfProto);
 }
 
 message SearchShelfParametersProto {
   int32 id = 1;
 }
 
-message Shelf {
+message ShelfProto {
   string row_no = 1;
   string shelf_no = 2;
   double dimension_x = 3;

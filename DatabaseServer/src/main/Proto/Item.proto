@@ -14,14 +14,14 @@ message AddItemParametersProto {
   int32 amount = 3;
 }
 
-message Item {
-  ItemType type = 1;
+message ItemProto {
+  ItemProto type = 1;
   int32 id = 2;
   //user.User owner = 3;
   int32 shelf_id = 4;
 }
 
-message ItemType {
+message ItemTypeProto {
   int32 id = 1;
   double dimension_x = 2;
   double dimension_y = 3;
