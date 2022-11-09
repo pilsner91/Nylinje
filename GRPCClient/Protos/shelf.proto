@@ -2,7 +2,6 @@ syntax = "proto3";
 
 import "Protos/item.proto";
 
-option csharp_namespace = "GRPCClient";
 
 package shelf;
 

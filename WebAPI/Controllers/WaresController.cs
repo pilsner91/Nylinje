@@ -17,9 +17,9 @@ public class WaresController : ControllerBase {
     }
 
     [HttpPost]
-    public async Task<ActionResult<Item>> CreateAsync(ItemCreationDto dto) {
+    public async Task<ActionResult<Shared.Model.Item>> CreateAsync(ItemCreationDto dto) {
         try {
-            Item item = await _itemLogic.CreateAsync(dto);
+            Shared.Model.Item item = await _itemLogic.CreateAsync(dto);
             return Created($"/todos/{item.Uid}", item);
         }
         catch (Exception e) {
