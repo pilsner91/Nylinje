@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DatabaseServer" />
+        <module name="lagersystem" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="DatabaseServer" target="1.5" />
+      <module name="lagersystem" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
