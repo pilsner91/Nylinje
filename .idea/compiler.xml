@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <excludeFromCompile>
-      <directory url="file://$PROJECT_DIR$/../DataBase/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../Database/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/../DB/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
@@ -11,11 +11,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DB" />
-        <module name="DatabaseServer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Database" target="17" />
+      <module name="DatabaseServer" target="17" />
       <module name="lagersystem" target="17" />
     </bytecodeTargetLevel>
   </component>

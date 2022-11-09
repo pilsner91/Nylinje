@@ -5,7 +5,6 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/DB/pom.xml" />
-        <option value="$PROJECT_DIR$/DatabaseServer/pom.xml" />
       </list>
     </option>
   </component>
