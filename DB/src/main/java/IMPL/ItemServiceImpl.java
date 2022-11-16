@@ -3,14 +3,13 @@ package IMPL;
 import GRPC.item.*;
 import GRPC.shelf.SearchShelfParametersProto;
 import GRPC.shelf.ShelfProto;
-import GRPC.shelf.ShelvesGrpc;
 import io.grpc.stub.StreamObserver;
 
 public class ItemServiceImpl extends ItemsGrpc.ItemsImplBase {
-/*
+
     public void getItem(SearchItemsParametersProto itemRequest, StreamObserver<ItemProto> itemResponds){
-        ItemProto itemPrto = ItemProto.newBuilder().setId(2).setShelfId(2).setu
-    }
+        ItemTypeProto typeProto = ItemTypeProto.newBuilder().setDimensionX(2).setDimensionY(2).setDimensionZ(2).setId(2).build();
+        ItemProto itemPrto = ItemProto.newBuilder().setId(2).setShelfId(2).setType(typeProto).build();    }
 
     public void getShelf(SearchShelfParametersProto request, StreamObserver<ShelfProto> response
     ){
@@ -20,7 +19,7 @@ public class ItemServiceImpl extends ItemsGrpc.ItemsImplBase {
 
 
 
- */
+
 
 
 }
