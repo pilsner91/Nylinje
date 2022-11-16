@@ -10,9 +10,19 @@ public class ShelfServiceIMPL extends ShelvesGrpc.ShelvesImplBase
 {
     @Override
     public void getShelf(SearchShelfParametersProto request, StreamObserver<ShelfProto> response
-                         ){
-        ShelfProto fisk = ShelfProto.newBuilder().setShelfNo("2").setDimensionX(2).setDimensionY(2).setDimensionZ(2).setRowNo("3").build();
+                         )
+    {
+        ShelfProto fisk = ShelfProto.newBuilder()
+                .setShelfNo("2")
+                .setDimensionX(2)
+                .setDimensionY(2)
+                .setDimensionZ(2)
+                .setRowNo("3")
+                .build();
 
+        response.onNext(fisk);
+
+        response.onCompleted();
     }
 
 
