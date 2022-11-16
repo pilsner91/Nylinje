@@ -1,7 +1,7 @@
 package me.via316455.databaseserver;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.testng.annotations.Test;
 
 @SpringBootTest
 class DatabaseServerApplicationTests {
