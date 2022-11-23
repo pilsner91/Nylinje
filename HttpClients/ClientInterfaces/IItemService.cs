@@ -7,6 +7,6 @@ public interface IItemService {
 
 
 
-    Task<Item> Create(ItemCreationDto dto);
+    Task<Item> CreateAsync(ItemCreationDto dto);
 
 }
