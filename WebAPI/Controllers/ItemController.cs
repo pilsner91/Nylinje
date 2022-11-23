@@ -7,20 +7,20 @@ namespace WebAPI.Controllers;
 
 [ApiController]
 [Route("[Controller]")]
-public class WaresController : ControllerBase {
+public class ItemController : ControllerBase {
 
     private IItemLogic _itemLogic;
 
 
-    public WaresController(IItemLogic itemLogic) {
+    public ItemController(IItemLogic itemLogic) {
         this._itemLogic = itemLogic;
     }
 
     [HttpPost]
-    public async Task<ActionResult<Shared.Model.Item>> CreateAsync(ItemCreationDto dto) {
+    public async Task<ActionResult<Item>> CreateAsync(ItemCreationDto dto) {
         try {
-            Shared.Model.Item item = await _itemLogic.CreateAsync(dto);
-            return Created($"/todos/{item.Uid}", item);
+            Item item = await _itemLogic.CreateAsync(dto);
+            return Created($"/item/{item.Uid}", item);
         }
         catch (Exception e) {
             Console.WriteLine(e);
