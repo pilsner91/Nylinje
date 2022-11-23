@@ -16,7 +16,7 @@ public class ItemHttpClient : IItemService {
     }
 
     public async Task<Item> CreateAsync(ItemCreationDto dto) {
-        HttpResponseMessage response = await client.PostAsJsonAsync("/items", dto);
+        HttpResponseMessage response = await client.PostAsJsonAsync("/item", dto);
         string result = await response.Content.ReadAsStringAsync();
         
         if (response.StatusCode == HttpStatusCode.NotFound)
