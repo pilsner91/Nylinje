@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="Pom.Xml update v2 i nyt projekt">
+    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="Projekt rename, da Mikkel pc er lårt">
+      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ItemServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/Item.proto" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/Proto/Item.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,16 +62,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;0a5a4d7386065c6c6ac19c303768c7e1&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -75,14 +72,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Database">
-    <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Database" />
-      <module name="DB" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.DatabaseServerApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,11 +98,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Database" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -128,12 +113,6 @@
       <workItem from="1667983292891" duration="316000" />
       <workItem from="1667985595356" duration="55000" />
       <workItem from="1667988886932" duration="611000" />
-      <workItem from="1667997830196" duration="2918000" />
-      <workItem from="1668068934322" duration="125000" />
-      <workItem from="1668070024447" duration="6000" />
-      <workItem from="1668586078488" duration="32000" />
-      <workItem from="1668586126239" duration="433000" />
-      <workItem from="1668591036187" duration="8513000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit Java">
       <created>1667318961742</created>
@@ -177,14 +156,7 @@
       <option name="project" value="LOCAL" />
       <updated>1667993678617</updated>
     </task>
-    <task id="LOCAL-00007" summary="Pom.Xml update v2 i nyt projekt">
-      <created>1668591536808</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1668591536808</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,18 +180,7 @@
     <MESSAGE value="Proto rename" />
     <MESSAGE value="Projekt rename, da Mikkel pc er lårt" />
     <MESSAGE value="Pom.Xml update i nyt projekt" />
-    <MESSAGE value="Pom.Xml update v2 i nyt projekt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pom.Xml update v2 i nyt projekt" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.io.IOException" package="java.io" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="Pom.Xml update i nyt projekt" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
