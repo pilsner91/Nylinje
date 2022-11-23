@@ -1,3 +1,4 @@
+using System.Net;
 using System.Net.Http.Json;
 using System.Text.Json;
 using HttpClients.ClientInterfaces;
@@ -17,8 +18,14 @@ public class ItemHttpClient : IItemService {
     public async Task<Item> CreateAsync(ItemCreationDto dto) {
         HttpResponseMessage response = await client.PostAsJsonAsync("/items", dto);
         string result = await response.Content.ReadAsStringAsync();
+        
+        if (response.StatusCode == HttpStatusCode.NotFound)
+        {
+            throw new Exception("ItemType not found");
+        }
         if (!response.IsSuccessStatusCode)
         {
+            
             throw new Exception(result);
         }
 
