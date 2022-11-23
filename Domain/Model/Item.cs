@@ -7,4 +7,11 @@ public class Item {
     public User? Owner { get; set; }
     public Shelf? Shelf { get; set; }
 
+    public Item(itemType? type, int uid, User? owner, Shelf? shelf)
+    {
+        Type = type;
+        Uid = uid;
+        Owner = owner;
+        Shelf = shelf;
+    }
 }

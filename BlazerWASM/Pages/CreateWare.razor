@@ -4,6 +4,7 @@
 
 
 @inject IItemService Service;
+@inject NavigationManager NavigationManager;
 
 <h3>CreateWare</h3>
  <br/>
@@ -54,19 +55,30 @@
     {
         try
         {
-            await Service.CreateAsync(new ItemCreationDto(kundeNummer, vareNummer, vareAntal));
+            await Service.CreateAsync(new ItemCreationDto(vareNummer, vareAntal, kundeNummer));
             kundeNummer = null;
             vareNummer = null;
             vareAntal = null;
             resultMsg = "";
             color = "green";
+            NavigationManager.NavigateTo("/ShelfPage");
         }
+        
         catch (Exception e)
         {
+            if (e.Message.Equals("ItemType not found"))
+            {
+                NavigationManager.NavigateTo("/");
+            }
+            
             Console.WriteLine(e);
             resultMsg = e.Message;
             color = "red";
+            
+            
         }
+        
+        
     }
 
 

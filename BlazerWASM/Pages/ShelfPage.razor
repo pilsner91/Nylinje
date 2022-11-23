@@ -1,0 +1,65 @@
+﻿@page "/shelfpage"
+@using global::Shared.Model
+@using global::Shared.DTOs
+@inject HttpClient Http
+
+<h3>ShelfPage</h3>
+
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Shelf ID</th>
+            <th>Avalible Capacity</th>
+            <th>Input Wished</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in glqt)
+        {
+           
+                <tr>
+                        <td>@item.ItemType</td>
+                        <td>@item.Amount</td>
+                        <td>@item.ShelfId</td>
+                        <td>
+                            @*<FancyCheckBox IsCompleted="@item.Published" OnChange="@((status) => Published(item, status))"/*@
+                        </td>
+                        <td>
+                            @*<img src="icons/edit.gif" class="funnel" @onclick="@(() => navMgr.NavigateTo($"/EditPost/{item.Id}"))"/>*@
+                        </td>
+                        <td>
+                            @*<label @onclick="@(() => RemovePost(item.Id))" style="cursor:pointer; color: red; font-weight: bold">
+                                &#x2717;
+                            </label>*@
+                        </td>
+                        <td><label></label></td>
+                    </tr>
+               
+            
+        }
+        </tbody>
+    </table>
+@code {
+    private int? ShelfId;
+    private int? AvalibleCapacity;
+    private int? InputWished;
+
+
+
+
+
+
+    private List<ItemRegisterResponseDto> glqt = new List<ItemRegisterResponseDto>
+    {
+        new ItemRegisterResponseDto
+        {
+            ItemType = 1,
+            Amount = 2,
+            ShelfId = 2
+        }
+    };
+
+}
