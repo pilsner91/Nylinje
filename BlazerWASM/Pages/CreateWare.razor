@@ -6,37 +6,39 @@
 @inject IItemService Service;
 
 <h3>CreateWare</h3>
+ <br/>
 
-<div class="card">
+<div class="card col-6 border border-0">
+<div>
     <div>
-        <div>
         <label>Kundenummer</label>
-        <input type="text" @bind="kundeNummer"/>
+        <input type="text" class ="form-control col-6"@bind="kundeNummer"/>
         @if (!string.IsNullOrEmpty(resultMsg))
         {
             <label style="color: @color">@resultMsg</label>
         }
-        </div>
-        <div>
+    </div>
+    <div class="my-2">
         <label>Varenummer</label>
-        <input type="text" @bind="vareNummer"/>
+        <input type="text" class ="form-control col-6" @bind="vareNummer"/>
         @if (!string.IsNullOrEmpty(resultMsg))
         {
             <label style="color: @color">@resultMsg</label>
         }
-        </div>
+    </div>
     <div>
         <label>Vare antal</label>
-        <input type="text" @bind="vareAntal"/>
+        <input type="text" class ="form-control col-6" @bind="vareAntal"/>
         @if (!string.IsNullOrEmpty(resultMsg))
         {
             <label style="color: @color">@resultMsg</label>
         }
-        </div>
-
-        <button @onclick="createWare" class="acceptbtn">Create</button>
     </div>
+    
+    <button @onclick="createWare" class="acceptbtn my-2">Create</button>
 </div>
+</div>
+
 
 
 @code {

@@ -1,6 +1,5 @@
 ﻿syntax = "proto3";
 
-package GRPC.shelf;
 
 service Shelves {
   rpc GetShelf(SearchShelfParametersProto) returns (ShelfProto);
@@ -16,5 +15,5 @@ message ShelfProto {
   double dimension_x = 3;
   double dimension_y = 4;
   double dimension_z = 5;
-  //repeated item.Item items_on_shelf = 6;
+
 }
