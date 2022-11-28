@@ -1,9 +1,9 @@
 ﻿syntax ="proto3";
-package GRPC.proto;
+package GRPC.general;
 
 
 
-service Serivce {
+service Serivces {
 
   rpc getShelf(ShelfSearchRequest) returns (Shelf);
   rpc UpdateShelf(Shelf) returns (Shelf);
@@ -36,9 +36,10 @@ message ShelfSearchRequest{
 
 
 message ItemTypeCreationRequest{
-  double DimX = 1;
-  double DimY = 2;
-  double DimZ = 3;
+  int32 id = 1;
+  double DimX = 2;
+  double DimY = 3;
+  double DimZ = 4;
 }
 
 message ItemTypeSearchRequest{

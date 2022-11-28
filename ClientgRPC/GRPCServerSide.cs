@@ -2,6 +2,9 @@
 
 using GRPC.Item;
 using Grpc.Net.Client;
+using GRPC.General;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+using Microsoft.Extensions.DependencyInjection;
 
 public class GRPCServerSide{
     
@@ -9,30 +12,31 @@ public class GRPCServerSide{
 private SearchShelfParametersProto _shelfParametersProto = new SearchShelfParametersProto {Id = 1};
 private SearchItemsParametersProto _itemsParametersProto = new SearchItemsParametersProto { Id = 1 };
 
-private var _channel = GrpcChannel.ForAddress("http://localhost:9090");
-private var _shelvesClient = new Shelves.ShelvesClient(_channel);
-private var _itemClient = new Items.ItemsClient(_channel);
-private var _proto = new Service
+
 
 async Task<ShelfProto> GetShelf(SearchShelfParametersProto search)
 {
+    var _channel = GrpcChannel.ForAddress("http://localhost:9090");
+    var _shelvesClient = new Shelves.ShelvesClient(_channel);
     ShelfProto shelfProto = await _shelvesClient.GetShelfAsync(search);
     return shelfProto;
 }
-ShelfProto _shelfProto = await GetShelf(_shelfParametersProto);
 
 
 async Task<ItemProto> GetItem(SearchItemsParametersProto search)
 {
+var _channel = GrpcChannel.ForAddress("http://localhost:9090");
+var _itemClient = new Items.ItemsClient(_channel);
     ItemProto itemProto = await _itemClient.GetItemsAsync(search);
     return itemProto;
 }
 
-ItemProto _itemProto = await GetItem(_itemsParametersProto);
+public async Task<ItemType> CreateItemTypeGRPC(ItemTypeCreationRequest dao)
+{
+    var _channel = GrpcChannel.ForAddress("http://localhost:9090");
+    var _itemType = new Serivces.SerivcesClient(_channel);
+    ItemType itemTypeProto = await _itemType.CreateItemTypeAsync(dao);
+    return itemTypeProto;
+}
 
-
-
-
-Console.WriteLine(_shelfProto.RowNo);
-Console.WriteLine(_itemProto.Id);
 }

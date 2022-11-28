@@ -22,6 +22,7 @@
       <Protobuf Include="proto/shelf.proto" GrpcServices="Client" />
       <Protobuf Include="proto/Item.proto" GrpcServices="Client" />
         <Protobuf Include="proto/user.proto" GrpcServices="Client" />
+        <Protobuf Include="proto/general.proto" GrpcServices="Client" />
     </ItemGroup>
 
 
