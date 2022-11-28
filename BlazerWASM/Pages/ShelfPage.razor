@@ -3,45 +3,58 @@
 @using global::Shared.DTOs
 @inject HttpClient Http
 
-<h3>ShelfPage</h3>
+<h3 class="text-center mb-5">ShelfPage</h3>
 
 
+<div class="container-fluid mt-3 ">
+    <div class="row">
+    <div class="col-sm-6">
 
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Shelf ID</th>
-            <th>Avalible Capacity</th>
-            <th>Input Wished</th>
-         
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var item in glqt)
-        {
-           
-                <tr>
-                        <td>@item.ItemType</td>
-                        <td>@item.Amount</td>
-                        <td>@item.ShelfId</td>
-                        <td>
-                            @*<FancyCheckBox IsCompleted="@item.Published" OnChange="@((status) => Published(item, status))"/*@
-                        </td>
-                        <td>
-                            @*<img src="icons/edit.gif" class="funnel" @onclick="@(() => navMgr.NavigateTo($"/EditPost/{item.Id}"))"/>*@
-                        </td>
-                        <td>
-                            @*<label @onclick="@(() => RemovePost(item.Id))" style="cursor:pointer; color: red; font-weight: bold">
-                                &#x2717;
-                            </label>*@
-                        </td>
-                        <td><label></label></td>
-                    </tr>
-               
+        <table class="table ">
+            <tr>
+                <td class="border-1 text-center fw-bold">
+                    <label >Vare nummer</label>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label>Vare nummer</label> </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Vare nummer</label>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="col-sm-6">
+        <table class="table">
             
-        }
-        </tbody>
-    </table>
+            <tr class="border-1">
+                <th>Shelf ID</th>
+                <th>Avalible Capacity</th>
+                <th>Input Wished</th>
+
+            </tr>
+            
+            <tbody>
+            @foreach (var item in glqt)
+            {
+
+                <tr>
+                    <td>@item.ShelfID</td>
+                    <td>@item.AvalibleSpace</td>
+                    <td><INPUT name="InputWished" type="textfield" placeholder="skriv ønsket mængde"class="border-0"/></td>
+                    <td><label></label></td>
+                </tr>
+
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
 @code {
     private int? ShelfId;
     private int? AvalibleCapacity;
@@ -52,14 +65,25 @@
 
 
 
-    private List<ItemRegisterResponseDto> glqt = new List<ItemRegisterResponseDto>
+    private List<ShelfSpaceDTO> glqt = new List<ShelfSpaceDTO>
     {
-        new ItemRegisterResponseDto
+        new ShelfSpaceDTO
         {
-            ItemType = 1,
-            Amount = 2,
-            ShelfId = 2
-        }
+            ShelfID = 1,
+            AvalibleSpace = 2,
+            InputWished = 2
+
+        },
+        new ShelfSpaceDTO
+        {
+            ShelfID = 2,
+            AvalibleSpace = 4
+        },
+    new ShelfSpaceDTO
+    {
+        ShelfID = 1,
+        AvalibleSpace = 2
+    }
     };
 
 }
