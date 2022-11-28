@@ -39,4 +39,20 @@ public async Task<ItemType> CreateItemTypeGRPC(ItemTypeCreationRequest dao)
     return itemTypeProto;
 }
 
+public async Task<ItemType> SearchItemTypeGRPC(ItemTypeSearchRequest dao)
+{
+    var _channel = GrpcChannel.ForAddress("http://localhost:9090");
+    var _itemType = new Serivces.SerivcesClient(_channel);
+    ItemType itemTypeProto = await _itemType.ReadItemTypeAsync(dao);
+    return itemTypeProto;   
+}
+
+public async Task<Item> CreateItemGRPCAsync(ItemCreation dao)
+{
+    var _channel = GrpcChannel.ForAddress("http://localhost:9090");
+    var _item = new Serivces.SerivcesClient(_channel);
+    Item itemProto = await _item.CreateItemAsync(dao);
+    return itemProto;   
+}
+
 }
