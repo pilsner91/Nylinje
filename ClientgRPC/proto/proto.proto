@@ -3,10 +3,19 @@ package GRPC.proto;
 
 
 
-service ShelfSerivce {
-  
+service Serivce {
+
   rpc getShelf(ShelfSearchRequest) returns (Shelf);
   rpc UpdateShelf(Shelf) returns (Shelf);
+
+  rpc CreateItemType(ItemTypeCreationRequest) returns (ItemType);
+  rpc ReadItemType(ItemTypeSearchRequest) returns (ItemType);
+
+  rpc CreateItem(ItemCreation) returns (Item);
+  rpc ReadItem(ItemSearchRequest) returns (Item);
+  rpc DeleteItem(ItemSearchRequest) returns (Item);
+
+  rpc CreateUser(CreateUserRequest) returns (User);
 }
 
 message Shelf {
@@ -24,10 +33,7 @@ message ShelfSearchRequest{
 
 
 
-service ItemTypeService{
-  rpc CreateItemType(ItemTypeCreationRequest) returns (ItemType);
-  rpc ReadItemType(ItemTypeSearchRequest) returns (ItemType);
-}
+
 
 message ItemTypeCreationRequest{
   double DimX = 1;
@@ -47,12 +53,7 @@ message ItemType{
 }
 
 
-service ItemService{
-  rpc CreateItem(ItemCreation) returns (Item);
-  rpc ReadItem(ItemSearchRequest) returns (Item);
-  rpc DeleteItem(ItemSearchRequest) returns (Item);
-  
-}
+
 
 message ItemCreation{
   int32 ItemTypeID = 1;
@@ -71,11 +72,9 @@ message Item{
   Shelf shelf = 4;
 }
 
-service UserService{
-  rpc CreateUser(CreateUser) returns (User);
-}
 
-message CreateUser{
+message CreateUserRequest{
+  int32 id = 1;
 }
 
 message User{
