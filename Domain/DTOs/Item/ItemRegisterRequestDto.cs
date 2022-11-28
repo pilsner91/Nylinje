@@ -3,6 +3,4 @@
 public record ItemRegisterReqiestDto
 (
     int? ItemType,
-    int? Amount,
-    int? ShelfId
-);  
+    List<AmountOnSpaceDto> ShelfInfo);  
