@@ -1,44 +1,38 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using Grpc.Net.Client;
 using GRPC.Item;
+using Grpc.Net.Client;
 
+public class GRPCServerSide{
+    
 
+private SearchShelfParametersProto _shelfParametersProto = new SearchShelfParametersProto {Id = 1};
+private SearchItemsParametersProto _itemsParametersProto = new SearchItemsParametersProto { Id = 1 };
 
-
-
-SearchShelfParametersProto shelfParametersProto = new SearchShelfParametersProto {Id = 1};
-SearchItemsParametersProto itemsParametersProto = new SearchItemsParametersProto { Id = 1 };
-
-
-using var channel = GrpcChannel.ForAddress("http://localhost:9090");
-var shelvesClient = new Shelves.ShelvesClient(channel);
-var itemClient = new Items.ItemsClient(channel);
-
-
-
-
+private var _channel = GrpcChannel.ForAddress("http://localhost:9090");
+private var _shelvesClient = new Shelves.ShelvesClient(_channel);
+private var _itemClient = new Items.ItemsClient(_channel);
+private var _proto = new Service
 
 async Task<ShelfProto> GetShelf(SearchShelfParametersProto search)
 {
-    ShelfProto shelfProto = await shelvesClient.GetShelfAsync(search);
+    ShelfProto shelfProto = await _shelvesClient.GetShelfAsync(search);
     return shelfProto;
 }
-ShelfProto shelfProto = await GetShelf(shelfParametersProto);
+ShelfProto _shelfProto = await GetShelf(_shelfParametersProto);
 
 
 async Task<ItemProto> GetItem(SearchItemsParametersProto search)
 {
-    ItemProto itemProto = await itemClient.GetItemsAsync(search);
+    ItemProto itemProto = await _itemClient.GetItemsAsync(search);
     return itemProto;
 }
 
-ItemProto itemProto = await GetItem(itemsParametersProto);
+ItemProto _itemProto = await GetItem(_itemsParametersProto);
 
 
 
 
-Console.WriteLine(shelfProto.RowNo);
-Console.WriteLine(itemProto.Id);
-
-
+Console.WriteLine(_shelfProto.RowNo);
+Console.WriteLine(_itemProto.Id);
+}
