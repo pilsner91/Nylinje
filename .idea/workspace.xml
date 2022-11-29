@@ -4,29 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="proto update">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/GRPCDataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Item/CreateItemAdapterDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/ItemType/CreateItemTypeAdapterDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/User/CreateUserAdapterDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/database/DAOs/ItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/database/DAOs/ItemTypeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/database/DAOs/ShelfDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/database/DAOs/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IItemTypeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IShelfDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IUserDao.java" afterDir="false" />
+    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="ting">
+      <change afterPath="$PROJECT_DIR$/Domain/DTOs/Item/ItemSearchDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/Adapterne/DeleteItemAdp.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Shelf/Adp/ReadShelfAdp.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Shelf/IShelfClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Shelf/ShelfClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sep3.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/IGRPCDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/IGRPCDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/IMPL/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ItemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java" afterDir="false" />
-    </list>
-    <list id="2c67dbad-295e-4d5e-99fd-ae2dd09aa0b0" name="Changes by spam" comment="">
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientgRPC/GRPCServerSide.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientgRPC/GRPCServerSide.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/DTOs/Item/ItemCreationDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/DTOs/Item/ItemCreationDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/Adapterne/ItemCreateAdapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/Adapterne/ItemCreateAdapter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/Adapterne/ReadItemAdp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/Adapterne/ReadItemAdp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/IItemClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/IItemClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/TypeMainAdapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/TypeMainAdapter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +30,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -55,16 +50,6 @@
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="8" changelist="81ffe829-311a-4bde-8753-4e2da12b99da" />
-        <range start1="5" end1="6" start2="10" end2="11" changelist="81ffe829-311a-4bde-8753-4e2da12b99da" />
-        <range start1="7" end1="8" start2="12" end2="16" changelist="81ffe829-311a-4bde-8753-4e2da12b99da" />
-        <range start1="10" end1="11" start2="18" end2="26" changelist="2c67dbad-295e-4d5e-99fd-ae2dd09aa0b0" />
-      </ranges>
-    </file>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="tiylsdnq" />
@@ -88,12 +73,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SDJ3aflevering" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "spring.configuration.checksum": "6cb25d4789cdd7fa1624e6356e0d825b"
+  }
+}]]></component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -142,6 +127,7 @@
       <workItem from="1667983292891" duration="316000" />
       <workItem from="1667985595356" duration="55000" />
       <workItem from="1667988886932" duration="611000" />
+      <workItem from="1669712224318" duration="1957000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit Java">
       <created>1667318961742</created>
@@ -192,14 +178,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669710155051</updated>
     </task>
-    <task id="LOCAL-00008" summary="proto update">
-      <created>1669712146918</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1669712146918</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,8 +203,7 @@
     <MESSAGE value="Projekt rename, da Mikkel pc er lårt" />
     <MESSAGE value="Pom.Xml update i nyt projekt" />
     <MESSAGE value="ting" />
-    <MESSAGE value="proto update" />
-    <option name="LAST_COMMIT_MESSAGE" value="proto update" />
+    <option name="LAST_COMMIT_MESSAGE" value="ting" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

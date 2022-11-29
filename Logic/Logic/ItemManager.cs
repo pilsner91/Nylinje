@@ -1,16 +1,26 @@
+using Logic.AdapterToGRPC.Item;
+using Logic.AdapterToGRPC.Shelf;
 using Logic.LogicInterfaces;
 using Shared.DTOs;
 using Shared.Model;
 
 namespace Logic.Logic; 
 
-public class ItemManager : IItemLogic, IItemManager {
-    public async Task<Shared.Model.Item>  CreateAsync(ItemCreationDto dto) {
-        throw new NotImplementedException();
+public class ItemManager : IItemLogic, IItemManager
+{
+    IShelfClient _shelfClient;
+    IItemClient _itemClient;
+    IItemTypeClient _itemTypeClient;
+    
+    public async Task<Item> CreateAsync(ItemCreationDto dto)
+    {
+        return await _itemClient.Create(dto);
     }
 
     public async Task<itemType> createItemAsync(ItemTypeCreationDto dto)
     {
-        throw new NotImplementedException();
+        return await _itemTypeClient.Create(dto);
     }
+
+
 }

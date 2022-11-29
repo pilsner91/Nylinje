@@ -10,18 +10,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="DatabaseServer" />
         <module name="DB" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Database" target="17" />
-      <module name="DatabaseServer" target="17" />
+      <module name="DB" target="17" />
       <module name="lagersystem" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="DB" options="-parameters --add-modules java.base" />
+      <module name="DB" options="-parameters" />
       <module name="Database" options="-parameters" />
       <module name="DatabaseServer" options="-parameters" />
     </option>

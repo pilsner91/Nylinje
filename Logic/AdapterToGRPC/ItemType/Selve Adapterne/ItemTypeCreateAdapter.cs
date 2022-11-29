@@ -11,10 +11,10 @@ public class ItemTypeCreateAdapter
     
     private GRPCServerSide _grpcServerSide;
     
-    public itemType  CreateAdapter(ItemTypeCreationDto dto)
+    public async Task<itemType>  CreateAdapter(ItemTypeCreationDto dto)
     {
         ItemTypeCreationRequest itemCreationProto = new ItemTypeCreationRequest{DimX = dto.DimensionX, DimY = dto.DimenstionY, DimZ = dto.DimensionZ};
-        ItemType itemTypeProto = _grpcServerSide.CreateItemTypeGRPC(itemCreationProto).Result;
+        ItemType itemTypeProto = await _grpcServerSide.CreateItemTypeGRPC(itemCreationProto);
         Shared.Model.itemType itemTypeDomain =
             new itemType(itemCreationProto.Id, itemTypeProto.DimX, itemCreationProto.DimY, itemCreationProto.DimZ);
 

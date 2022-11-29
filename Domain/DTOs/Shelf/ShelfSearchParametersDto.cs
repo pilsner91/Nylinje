@@ -1,3 +1,4 @@
 ﻿namespace Shared.DTOs; 
 
-public record ShelfSearchParametersDto(double DimensionX, double DimensionY, double DimensionZ);
+public record ShelfSearchParametersDto(
+    uint? id,double? DimY,double? DimZ,double? DimX);

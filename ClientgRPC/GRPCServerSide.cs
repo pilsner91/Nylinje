@@ -4,6 +4,7 @@ using GRPC.Item;
 using Grpc.Net.Client;
 using GRPC.General;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+using Microsoft.AspNetCore.StaticFiles.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 
 public class GRPCServerSide{
@@ -53,6 +54,39 @@ public async Task<Item> CreateItemGRPCAsync(ItemCreation dao)
     var _item = new Serivces.SerivcesClient(_channel);
     Item itemProto = await _item.CreateItemAsync(dao);
     return itemProto;   
+}
+
+public async Task<Item> GetItemGRPCAsync(ItemSearchRequest dao)
+{
+    var _channel = GrpcChannel.ForAddress("http://localhost:9090");
+    var _item = new Serivces.SerivcesClient(_channel);
+    Item itemProto = await _item.ReadItemAsync(dao);
+    return itemProto;    
+}
+
+public async Task<Item> DeleteItemGRPCAsync(ItemSearchRequest dao)
+{
+    var _channel = GrpcChannel.ForAddress("http://localhost:9090");
+    var _item = new Serivces.SerivcesClient(_channel);
+    Item itemProto = await _item.DeleteItemAsync(dao);
+    return itemProto;
+}
+
+
+public async Task<Shelf> ReadShelfAsync(ShelfSearchRequest dao)
+{
+    var _channel = GrpcChannel.ForAddress("http://localhost:9090");
+    var _shelf = new Serivces.SerivcesClient(_channel);
+    Shelf shelfProto = await _shelf.getShelfAsync(dao);
+    return shelfProto;
+}
+
+public async Task<Shelf> UpdateSelfAsync(Shelf dao)
+{
+    var _channel = GrpcChannel.ForAddress("http://localhost:9090");
+    var _shelf = new Serivces.SerivcesClient(_channel);
+    Shelf shelfProto = await _shelf.UpdateShelfAsync(dao);
+    return shelfProto;
 }
 
 }
