@@ -16,7 +16,14 @@ public class GetShelfAdapterDB {
         this.shelfConnector = dao;
     }
 
-    public Shelf GetShelf(int shelfId){
+    public Shelf shelfResponse(ShelfSearchRequest shelfProto) throws SQLException
+    {
+
+        Domain.Model.Shelf shelfDomain = shelfConnector.Read(shelfProto.getId());
+        ArrayList<Item> itemResponses;
+
+        shelfDomain.
+
 
     }
 }
