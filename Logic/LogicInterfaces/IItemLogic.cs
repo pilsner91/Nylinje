@@ -1,8 +1,9 @@
 using Shared.DTOs;
+using Shared.Model;
 
 
 namespace Logic.LogicInterfaces; 
 
 public interface IItemLogic {
-    Task<Shared.Model.Item> CreateAsync(ItemCreationDto dto);
+    Task<Item> CreateAsync(ItemCreationDto dto);
 }

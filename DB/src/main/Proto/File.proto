@@ -18,7 +18,7 @@ service Serivce {
   rpc CreateItem(ItemCreation) returns (Item);
   rpc ReadItem(ItemSearchRequest) returns (Item);
   rpc DeleteItem(ItemSearchRequest) returns (Item);
-
+  
   rpc CreateUser(CreateUserRequest) returns (User);
 }
 

@@ -8,10 +8,10 @@ public class ReadItemTypeAdapter
 {
     private GRPCServerSide _grpcServerSide;
     
-    public itemType ReadItem(ItemTypeSearchDto dto)
+    public async Task<itemType> ReadItem(ItemTypeSearchDto dto)
     {
         ItemTypeSearchRequest itemTypeSearch = new ItemTypeSearchRequest{Id = dto.id};
-        ItemType itemTypeProto = _grpcServerSide.SearchItemTypeGRPC(itemTypeSearch).Result;
+        ItemType itemTypeProto = await _grpcServerSide.SearchItemTypeGRPC(itemTypeSearch);
         Shared.Model.itemType itemTypeDomain =
             new itemType(itemTypeProto.Id, itemTypeProto.DimX, itemTypeProto.DimY, itemTypeProto.DimZ);
 

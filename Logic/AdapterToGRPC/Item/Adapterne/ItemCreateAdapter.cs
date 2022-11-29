@@ -1,29 +1,45 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Shared.DTOs;
+using Shared.Model;
 
 namespace Logic.AdapterToGRPC.Item.Adapterne;
 
 public class ItemCreateAdapter
 {
-    public Shared.Model.Item createItem(ItemCreationDto dto)
+    private GRPCServerSide _grpcServerSide { get;set; }
+    
+    public async Task<Shared.Model.Item> createItem(ItemCreationDto dto)
     {
-        message Item{
-            ItemType type = 1;
-            int32 UniqueID = 2;
-            User owner = 3;
-            Shelf shelf = 4;
-        }
-        message ItemType{
-            int32 id = 1;
-            double DimX = 2;
-            double DimY = 3;
-            double DimZ = 4;
-        }
-        GRPC.General.Item itemCreationProto = new GRPC.General.ItemCreation{ItemTypeID = dto.ItemTypeId,ShelfID = dto.};
-        GRPC.General.Item itemTypeProto = .Result;
-        Shared.Model.itemType itemTypeDomain =
-            new itemType(itemCreationProto.Id, itemTypeProto.DimX, itemCreationProto.DimY, itemCreationProto.DimZ);
 
-        return itemTypeDomain;
+        GRPC.General.ItemCreation itemCreationProto = new GRPC.General.ItemCreation{ItemTypeID = dto.ItemTypeId,ShelfID = dto.shelfId,OwnerID = (int)dto.OwnerId};
+        GRPC.General.Item itemProto = await _grpcServerSide.CreateItemGRPCAsync(itemCreationProto);
+        
+        User user = new User();
+        user.Id = itemProto.Owner.Id;
+        
+        Shared.Model.Shelf shelf = new Shared.Model.Shelf();
+        shelf.DimX = itemProto.Shelf.Dimz;
+        shelf.DimY = itemProto.Shelf.Dimy;
+        shelf.DimZ = itemProto.Shelf.Dimz;
+        shelf.RowNo = itemProto.Shelf.RowNo;
+        shelf.ShelfNo = itemProto.Shelf.ShelfNo;
+        
+        shelf.ItemsOnShelf = new List<Shared.Model.Item>();
+        foreach (var itemss in itemProto.Shelf.ItemsOnShelf)
+        {
+            User userit = new User();
+        
+            userit.Id = itemProto.Owner.Id;
+
+            Shared.Model.Item item = new Shared.Model.Item(itemss.Type, itemss.UniqueID, userit, shelf);
+            shelf.ItemsOnShelf.Add(item);
+        }
+        
+        
+        
+        Shared.Model.Item itemDomain =
+            new Shared.Model.Item(itemProto.Type,itemProto.UniqueID,user,shelf);
+
+        return itemDomain;
     }
 }

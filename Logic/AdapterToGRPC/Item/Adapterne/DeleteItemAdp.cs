@@ -1,19 +1,17 @@
 ﻿using GRPC.General;
 using Shared.DTOs;
-using Shared.Model;
 using Shelf = Shared.Model.Shelf;
-using User = GRPC.General.User;
 
 namespace Logic.AdapterToGRPC.Item.Adapterne;
 
-public class ReadItemAdp
+public class DeleteItemAdp
 {
-    GRPCServerSide _grpcServerSide { get;set; }
+    private GRPCServerSide _grpcServerSide { get;set; }
 
-    public async Task<Shared.Model.Item> Read(ItemSearchDto dao)
+    public async Task<Shared.Model.Item> Delete(ItemSearchDto dao)
     {
         ItemSearchRequest itemSearch = new ItemSearchRequest{Id = dao.id};
-        GRPC.General.Item itemProto = await _grpcServerSide.GetItemGRPCAsync(itemSearch);
+        GRPC.General.Item itemProto = await _grpcServerSide.DeleteItemGRPCAsync(itemSearch);
         
         Shared.Model.User user = new Shared.Model.User();
         user.Id = itemProto.Owner.Id;

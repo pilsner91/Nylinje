@@ -9,13 +9,13 @@ public class ItemTypeMainAdapter: IItemTypeClient
     private ReadItemTypeAdapter readadp = new ReadItemTypeAdapter();
     private ItemTypeCreateAdapter saveadp = new ItemTypeCreateAdapter();
 
-    public itemType Create(ItemTypeCreationDto dto)
+    public async Task<itemType> Create(ItemTypeCreationDto dto)
     {
-        return saveadp.CreateAdapter(dto);
+        return await saveadp.CreateAdapter(dto);
     }
 
-    public itemType Read(ItemTypeSearchDto dto)
+    public async Task<itemType> Read(ItemTypeSearchDto dto)
     {
-        return readadp.ReadItem(dto);
+        return await readadp.ReadItem(dto);
     }
 }

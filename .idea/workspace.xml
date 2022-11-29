@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="ting">
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/IGRPCDataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/DTOs/Item/ItemSearchDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/Adapterne/DeleteItemAdp.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Shelf/Adp/ReadShelfAdp.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Shelf/IShelfClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Shelf/ShelfClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sep3.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientgRPC/GRPCServerSide.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientgRPC/GRPCServerSide.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/DTOs/Item/ItemCreationDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/DTOs/Item/ItemCreationDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/Adapterne/ItemCreateAdapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/Adapterne/ItemCreateAdapter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/Adapterne/ReadItemAdp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/Adapterne/ReadItemAdp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/IItemClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/IItemClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/TypeMainAdapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/AdapterToGRPC/Item/TypeMainAdapter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +37,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -60,9 +73,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "spring.configuration.checksum": "6cb25d4789cdd7fa1624e6356e0d825b"
+  }
+}]]></component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -111,6 +127,7 @@
       <workItem from="1667983292891" duration="316000" />
       <workItem from="1667985595356" duration="55000" />
       <workItem from="1667988886932" duration="611000" />
+      <workItem from="1669712224318" duration="1957000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit Java">
       <created>1667318961742</created>

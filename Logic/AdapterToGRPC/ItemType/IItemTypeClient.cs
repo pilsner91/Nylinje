@@ -5,7 +5,7 @@ namespace Logic.AdapterToGRPC.Item;
 
 public interface IItemTypeClient
 {
-    itemType Create(ItemTypeCreationDto dto);
-    itemType Read(ItemTypeSearchDto dto);
+    Task<itemType> Create(ItemTypeCreationDto dto);
+    Task<itemType> Read(ItemTypeSearchDto dto);
 
 }
