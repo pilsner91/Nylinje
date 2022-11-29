@@ -10,9 +10,11 @@ service Serivce {
   rpc getShelf(ShelfSearchRequest) returns (Shelf);
   rpc UpdateShelf(Shelf) returns (Shelf);
 
+
   rpc CreateItemType(ItemTypeCreationRequest) returns (ItemType);
   rpc ReadItemType(ItemTypeSearchRequest) returns (ItemType);
 
+  rpc GetItem(ItemSearchRequest) returns (Item);
   rpc CreateItem(ItemCreation) returns (Item);
   rpc ReadItem(ItemSearchRequest) returns (Item);
   rpc DeleteItem(ItemSearchRequest) returns (Item);

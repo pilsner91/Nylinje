@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="Projekt rename, da Mikkel pc er lårt">
-      <change afterPath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/Shelf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/itemType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09-11-2022_11_57_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09-11-2022_11_57__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09-11-2022_13_38_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09-11-2022_13_38__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/Item.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/shelf.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/user.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/IMPL/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ItemServiceImpl.java" afterDir="false" />
+    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="ting">
+      <change afterPath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/IGRPCDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -165,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667993678617</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ting">
+      <created>1669710155051</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669710155051</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +185,8 @@
     <MESSAGE value="Proto rename" />
     <MESSAGE value="Projekt rename, da Mikkel pc er lårt" />
     <MESSAGE value="Pom.Xml update i nyt projekt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pom.Xml update i nyt projekt" />
+    <MESSAGE value="ting" />
+    <option name="LAST_COMMIT_MESSAGE" value="ting" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

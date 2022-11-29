@@ -1,32 +1,29 @@
 package IMPL;
-/*
+
+import GRPC.proto.File;
+import GRPC.proto.SerivceGrpc;
 import GRPC.shelf.SearchShelfParametersProto;
 import GRPC.shelf.ShelfProto;
 import GRPC.shelf.ShelvesGrpc;
 import io.grpc.stub.StreamObserver;
 
 
-public class ShelfServiceIMPL extends ShelvesGrpc.ShelvesImplBase
+public class ShelfServiceIMPL extends SerivceGrpc.SerivceImplBase
 {
     @Override
-    public void getShelf(SearchShelfParametersProto request, StreamObserver<ShelfProto> response
-                         )
+    public void getShelf(File.ShelfSearchRequest itemRequest,
+                         StreamObserver<File.Shelf> itemResponds)
     {
-        ShelfProto fisk = ShelfProto.newBuilder()
-                .setShelfNo("2")
-                .setDimensionX(2)
-                .setDimensionY(2)
-                .setDimensionZ(2)
-                .setRowNo("3")
-                .build();
 
-        response.onNext(fisk);
 
-        response.onCompleted();
+
+
+
+        itemResponds.onCompleted();
     }
 
 
 
 }
 
- */
+
