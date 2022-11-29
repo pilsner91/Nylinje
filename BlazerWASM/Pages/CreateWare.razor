@@ -55,7 +55,9 @@
     {
         try
         {
-            await Service.CreateAsync(new ItemCreationDto(vareNummer, vareAntal, kundeNummer));
+            
+            await Service.CreateAsync(new ItemCreationDto((int)vareNummer, (int)vareAntal, (int)kundeNummer,true,0));
+            
             kundeNummer = null;
             vareNummer = null;
             vareAntal = null;

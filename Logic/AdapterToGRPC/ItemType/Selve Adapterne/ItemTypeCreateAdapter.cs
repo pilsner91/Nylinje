@@ -1,5 +1,6 @@
 ﻿
-using GRPC.General;
+using ClientgRPC;
+using GRPC.Proto;
 using Shared.DTOs;
 using Shared.Model;
 
@@ -14,7 +15,7 @@ public class ItemTypeCreateAdapter
     public async Task<itemType>  CreateAdapter(ItemTypeCreationDto dto)
     {
         ItemTypeCreationRequest itemCreationProto = new ItemTypeCreationRequest{DimX = dto.DimensionX, DimY = dto.DimenstionY, DimZ = dto.DimensionZ};
-        ItemType itemTypeProto = await _grpcServerSide.CreateItemTypeGRPC(itemCreationProto);
+        ItemTypeProto itemTypeProto = await _grpcServerSide.CreateItemTypeGRPC(itemCreationProto);
         Shared.Model.itemType itemTypeDomain =
             new itemType(itemCreationProto.Id, itemTypeProto.DimX, itemCreationProto.DimY, itemCreationProto.DimZ);
 

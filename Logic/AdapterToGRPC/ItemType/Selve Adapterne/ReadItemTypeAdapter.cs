@@ -1,4 +1,5 @@
-﻿using GRPC.General;
+﻿using ClientgRPC;
+using GRPC.Proto;
 using Shared.DTOs;
 using Shared.Model;
 
@@ -11,7 +12,7 @@ public class ReadItemTypeAdapter
     public async Task<itemType> ReadItem(ItemTypeSearchDto dto)
     {
         ItemTypeSearchRequest itemTypeSearch = new ItemTypeSearchRequest{Id = dto.id};
-        ItemType itemTypeProto = await _grpcServerSide.SearchItemTypeGRPC(itemTypeSearch);
+        ItemTypeProto itemTypeProto = await _grpcServerSide.SearchItemTypeGRPC(itemTypeSearch);
         Shared.Model.itemType itemTypeDomain =
             new itemType(itemTypeProto.Id, itemTypeProto.DimX, itemTypeProto.DimY, itemTypeProto.DimZ);
 

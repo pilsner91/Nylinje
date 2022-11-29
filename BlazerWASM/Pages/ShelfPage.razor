@@ -67,23 +67,18 @@
 
     private List<AmountOnSpaceDto> glqt = new List<AmountOnSpaceDto>
     {
+        new AmountOnSpaceDto(1,2)
+        ,
         new AmountOnSpaceDto
-        {
-            ShelfID = 1,
-            AvalibleSpace = 2,
-            InputWished = 2
-
-        },
-        new AmountOnSpaceDto
-        {
-            ShelfID = 2,
-            AvalibleSpace = 4
-        },
+        (
+             2,
+            4
+        ),
     new AmountOnSpaceDto
-    {
-        ShelfID = 1,
-        AvalibleSpace = 2
-    }
+    (
+        1,
+         2
+        )
     };
 
 }

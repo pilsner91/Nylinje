@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ClientgRPC;
+using GRPC.Proto;
+using Microsoft.AspNetCore.Mvc;
 using Shared.DTOs;
 using Shared.Model;
 
@@ -11,8 +13,8 @@ public class ItemCreateAdapter
     public async Task<Shared.Model.Item> createItem(ItemCreationDto dto)
     {
 
-        GRPC.General.ItemCreation itemCreationProto = new GRPC.General.ItemCreation{ItemTypeID = dto.ItemTypeId,ShelfID = dto.shelfId,OwnerID = (int)dto.OwnerId};
-        GRPC.General.Item itemProto = await _grpcServerSide.CreateItemGRPCAsync(itemCreationProto);
+        GRPC.Proto.ItemCreation itemCreationProto = new GRPC.Proto.ItemCreation{ItemTypeID = dto.ItemTypeId,ShelfID = (int)dto.shelfId,OwnerID = dto.OwnerId};
+        ItemProto itemProto = await _grpcServerSide.CreateItemGRPCAsync(itemCreationProto);
         
         User user = new User();
         user.Id = itemProto.Owner.Id;
@@ -31,14 +33,18 @@ public class ItemCreateAdapter
         
             userit.Id = itemProto.Owner.Id;
 
-            Shared.Model.Item item = new Shared.Model.Item(itemss.Type, itemss.UniqueID, userit, shelf);
+            itemType _itemType = new itemType(itemss.Type.Id, itemss.Type.DimX, itemss.Type.DimY, itemss.Type.DimZ);
+
+            
+            Shared.Model.Item item = new Shared.Model.Item(_itemType, itemss.UniqueID, userit, shelf);
             shelf.ItemsOnShelf.Add(item);
         }
         
-        
+        itemType itemTypedomain = new itemType(itemProto.Type.Id, itemProto.Type.DimX, itemProto.Type.DimY, itemProto.Type.DimZ);
+
         
         Shared.Model.Item itemDomain =
-            new Shared.Model.Item(itemProto.Type,itemProto.UniqueID,user,shelf);
+            new Shared.Model.Item(itemTypedomain,itemProto.UniqueID,user,shelf);
 
         return itemDomain;
     }

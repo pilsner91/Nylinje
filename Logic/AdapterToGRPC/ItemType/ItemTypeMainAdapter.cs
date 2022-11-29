@@ -1,5 +1,4 @@
-﻿using GRPC.General;
-using Shared.DTOs;
+﻿using Shared.DTOs;
 using Shared.Model;
 
 namespace Logic.AdapterToGRPC.Item;

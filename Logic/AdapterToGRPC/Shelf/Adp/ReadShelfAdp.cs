@@ -1,6 +1,8 @@
-﻿using GRPC.General;
+﻿using ClientgRPC;
+using GRPC.Proto;
 using Logic.AdapterToGRPC.Item.Adapterne;
 using Shared.DTOs;
+using Shared.Model;
 
 namespace Logic.AdapterToGRPC.Shelf.Adp;
 
@@ -10,7 +12,7 @@ public class ReadShelfAdp
 
     public async Task<Shared.Model.Shelf> ReadShelf(ShelfSearchParametersDto dao){
     ShelfSearchRequest shelfSearchRequest = new ShelfSearchRequest{Id = dao.id};
-            GRPC.General.Shelf shelfProto = await _grpcServerSide.ReadShelfAsync(shelfSearchRequest);
+            ShelfProto shelfProto = await _grpcServerSide.ReadShelfAsync(shelfSearchRequest);
         
             
             Shared.Model.Shelf shelf = new Shared.Model.Shelf();
@@ -26,8 +28,10 @@ public class ReadShelfAdp
                 Shared.Model.User userit = new Shared.Model.User();
             
                 userit.Id = itemss.Owner.Id;
-    
-                Shared.Model.Item item = new Shared.Model.Item(itemss.Type, itemss.UniqueID, userit, shelf);
+
+                itemType _itemType = new itemType(itemss.Type.Id, itemss.Type.DimX, itemss.Type.DimY, itemss.Type.DimZ);
+                
+                Shared.Model.Item item = new Shared.Model.Item(_itemType, itemss.UniqueID, userit, shelf);
                 shelf.ItemsOnShelf.Add(item);
             }
 

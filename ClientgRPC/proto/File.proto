@@ -1,20 +1,16 @@
-syntax ="proto3";
-
-
+﻿syntax ="proto3";
 package GRPC.proto;
 
 
 
-service Serivce {
+service Serivces {
 
   rpc getShelf(ShelfSearchRequest) returns (ShelfProto);
   rpc UpdateShelf(ShelfProto) returns (ShelfProto);
 
-
   rpc CreateItemType(ItemTypeCreationRequest) returns (ItemTypeProto);
   rpc ReadItemType(ItemTypeSearchRequest) returns (ItemTypeProto);
 
-  rpc GetItem(ItemSearchRequest) returns (ItemProto);
   rpc CreateItem(ItemCreation) returns (ItemProto);
   rpc ReadItem(ItemSearchRequest) returns (ItemProto);
   rpc DeleteItem(ItemSearchRequest) returns (ItemProto);
@@ -25,9 +21,9 @@ service Serivce {
 message ShelfProto {
   string RowNo = 1;
   string ShelfNo = 2;
-  double ShelfDimX = 3;
-  double ShelfDimY = 4;
-  double ShelfDimZ = 5;
+  double DimX = 3;
+  double Dimy = 4;
+  double Dimz = 5;
   repeated ItemProto ItemsOnShelf = 6;
 }
 
@@ -38,10 +34,12 @@ message ShelfSearchRequest{
 
 
 
+
 message ItemTypeCreationRequest{
-  double ItemDimX = 1;
-  double ItemDimY = 2;
-  double ItemDimZ = 3;
+  int32 id = 1;
+  double DimX = 2;
+  double DimY = 3;
+  double DimZ = 4;
 }
 
 message ItemTypeSearchRequest{
@@ -54,6 +52,8 @@ message ItemTypeProto{
   double DimY = 3;
   double DimZ = 4;
 }
+
+
 
 
 message ItemCreation{
@@ -75,6 +75,7 @@ message ItemProto{
 
 
 message CreateUserRequest{
+  int32 id = 1;
 }
 
 message UserProto{

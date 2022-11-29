@@ -1,8 +1,8 @@
-﻿using GRPC.General;
+﻿using ClientgRPC;
+using GRPC.Proto;
 using Shared.DTOs;
 using Shared.Model;
 using Shelf = Shared.Model.Shelf;
-using User = GRPC.General.User;
 
 namespace Logic.AdapterToGRPC.Item.Adapterne;
 
@@ -13,7 +13,7 @@ public class ReadItemAdp
     public async Task<Shared.Model.Item> Read(ItemSearchDto dao)
     {
         ItemSearchRequest itemSearch = new ItemSearchRequest{Id = dao.id};
-        GRPC.General.Item itemProto = await _grpcServerSide.GetItemGRPCAsync(itemSearch);
+        ItemProto itemProto = await _grpcServerSide.GetItemGRPCAsync(itemSearch);
         
         Shared.Model.User user = new Shared.Model.User();
         user.Id = itemProto.Owner.Id;
@@ -32,14 +32,18 @@ public class ReadItemAdp
         
             userit.Id = itemProto.Owner.Id;
 
-            Shared.Model.Item item = new Shared.Model.Item(itemss.Type, itemss.UniqueID, userit, shelf);
+            itemType _itemType = new itemType(itemss.Type.Id, itemss.Type.DimX, itemss.Type.DimY, itemss.Type.DimZ);
+
+            Shared.Model.Item item = new Shared.Model.Item(_itemType, itemss.UniqueID, userit, shelf);
             shelf.ItemsOnShelf.Add(item);
         }
-        
-        
+
+
+        itemType _itemTypeMain =
+            new itemType(itemProto.Type.Id, itemProto.Type.DimX, itemProto.Type.DimY, itemProto.Type.DimZ);
         
         Shared.Model.Item itemDomain =
-            new Shared.Model.Item(itemProto.Type,itemProto.UniqueID,user,shelf);
+            new Shared.Model.Item(_itemTypeMain,itemProto.UniqueID,user,shelf);
 
         return itemDomain;
     }

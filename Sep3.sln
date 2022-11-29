@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClients", "HttpClients\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientgRPC", "ClientgRPC\ClientgRPC.csproj", "{161C0F1C-55C4-4375-8DC0-2A4B915B8ABE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{66E5921E-EECF-4C8B-817A-65867B39BDB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,9 @@ Global
 		{161C0F1C-55C4-4375-8DC0-2A4B915B8ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{161C0F1C-55C4-4375-8DC0-2A4B915B8ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{161C0F1C-55C4-4375-8DC0-2A4B915B8ABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66E5921E-EECF-4C8B-817A-65867B39BDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E5921E-EECF-4C8B-817A-65867B39BDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E5921E-EECF-4C8B-817A-65867B39BDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E5921E-EECF-4C8B-817A-65867B39BDB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

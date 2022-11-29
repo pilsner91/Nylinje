@@ -14,6 +14,8 @@ public class ItemManager : IItemLogic, IItemManager
     
     public async Task<Item> CreateAsync(ItemCreationDto dto)
     {
+        Console.WriteLine($"antal = +{dto.Antal}; shelfId = {dto.shelfId}; OwnerId = {dto.OwnerId}; ItemTypeId = {dto.ItemTypeId}");
+        
         return await _itemClient.Create(dto);
     }
 

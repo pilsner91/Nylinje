@@ -1,16 +1,21 @@
-﻿namespace Logic.AdapterToGRPC.Shelf.Adp;
+﻿using ClientgRPC;
+using GRPC.Proto;
+using Shared.Model;
+
+
+namespace Logic.AdapterToGRPC.Shelf.Adp;
 
 public class UpdateShelfAdp
 {
     private GRPCServerSide _grpcServerSide = new GRPCServerSide();
     public async Task<Shared.Model.Shelf> UpdateShelf(Shared.Model.Shelf dao)
     {
-        GRPC.General.Shelf shelfRequest = new GRPC.General.Shelf
+        ShelfProto shelfRequest = new ShelfProto
         {
             Dimy = dao.DimY, Dimz = dao.DimZ, DimX = dao.DimX, RowNo = dao.RowNo, ShelfNo = dao.ShelfNo
         };
 
-        GRPC.General.Shelf shelfProto = await _grpcServerSide.UpdateSelfAsync(shelfRequest);
+        ShelfProto shelfProto = await _grpcServerSide.UpdateSelfAsync(shelfRequest);
         
         Shared.Model.Shelf shelf = new Shared.Model.Shelf();
         shelf.DimX = shelfProto.DimX;
@@ -26,7 +31,10 @@ public class UpdateShelfAdp
             
             userit.Id = itemss.Owner.Id;
     
-            Shared.Model.Item item = new Shared.Model.Item(itemss.Type, itemss.UniqueID, userit, shelf);
+            itemType _itemType = new itemType(itemss.Type.Id, itemss.Type.DimX, itemss.Type.DimY, itemss.Type.DimZ);
+
+            
+            Shared.Model.Item item = new Shared.Model.Item(_itemType, itemss.UniqueID, userit, shelf);
             shelf.ItemsOnShelf.Add(item);
         }
 

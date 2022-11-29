@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
@@ -19,10 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Protobuf Include="proto/shelf.proto" GrpcServices="Client" />
-      <Protobuf Include="proto/Item.proto" GrpcServices="Client" />
-        <Protobuf Include="proto/user.proto" GrpcServices="Client" />
-        <Protobuf Include="proto/general.proto" GrpcServices="Client" />
+        <Protobuf Include="proto\File.proto" GrpcServices="Client" />
     </ItemGroup>
 
 
