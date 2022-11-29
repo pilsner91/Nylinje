@@ -21,7 +21,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="DB" options="-parameters" />
+      <module name="DB" options="-parameters --add-modules java.base" />
       <module name="Database" options="-parameters" />
       <module name="DatabaseServer" options="-parameters" />
     </option>

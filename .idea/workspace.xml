@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="Projekt rename, da Mikkel pc er lårt">
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ItemServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/Item.proto" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/Proto/Item.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/Shelf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/itemType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09-11-2022_11_57_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09-11-2022_11_57__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09-11-2022_13_38_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09-11-2022_13_38__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/Item.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/shelf.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/user.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/IMPL/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,5 +1,5 @@
 package IMPL;
-
+/*
 import GRPC.shelf.SearchShelfParametersProto;
 import GRPC.shelf.ShelfProto;
 import GRPC.shelf.ShelvesGrpc;
@@ -28,3 +28,5 @@ public class ShelfServiceIMPL extends ShelvesGrpc.ShelvesImplBase
 
 
 }
+
+ */
