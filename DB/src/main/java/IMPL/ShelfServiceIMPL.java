@@ -2,9 +2,8 @@ package IMPL;
 
 import GRPC.proto.File;
 import GRPC.proto.SerivceGrpc;
-import GRPC.shelf.SearchShelfParametersProto;
-import GRPC.shelf.ShelfProto;
-import GRPC.shelf.ShelvesGrpc;
+import GRPCMethodCall.GRPCDataBase;
+import GRPCMethodCall.IGRPCDataBase;
 import io.grpc.stub.StreamObserver;
 
 
@@ -14,12 +13,15 @@ public class ShelfServiceIMPL extends SerivceGrpc.SerivceImplBase
     public void getShelf(File.ShelfSearchRequest itemRequest,
                          StreamObserver<File.Shelf> itemResponds)
     {
+        IGRPCDataBase converter = new GRPCDataBase() {
+
+
+        };
 
 
 
 
 
-        itemResponds.onCompleted();
     }
 
 

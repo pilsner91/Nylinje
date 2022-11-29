@@ -1,12 +1,14 @@
 package IMPL;
-/*
-import GRPC.item.*;
 
+
+
+import GRPC.proto.File;
 import GRPC.proto.SerivceGrpc;
+import GRPCMethodCall.IGRPCDataBase;
 import io.grpc.stub.StreamObserver;
 
 public class ItemServiceImpl extends SerivceGrpc.SerivceImplBase {
-
+/*
     public void getItems(SearchItemsParametersProto itemRequest, StreamObserver<ItemProto> itemResponds){
         ItemTypeProto typeProto = ItemTypeProto.newBuilder()
                 .setDimensionX(2).setDimensionY(2)
@@ -21,11 +23,7 @@ public class ItemServiceImpl extends SerivceGrpc.SerivceImplBase {
         itemResponds.onCompleted();
     }
 
-
-
-
+*/
 
 }
-
- */
 
