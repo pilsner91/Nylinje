@@ -1,9 +1,9 @@
-package adapter.conver.itemProto;
+package adapter.converter.itemProto;
 
 import Domain.Model.ItemType;
 import GRPC.proto.File.*;
 
-public class ConverItem
+public class ConverterItem
 {
   public static ItemTypeProto itemTypeToItemTypeProto(ItemType itemType)
   {
