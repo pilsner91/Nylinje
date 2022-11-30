@@ -37,9 +37,17 @@
         </dependency>
     </dependencies>
 
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <plugin>
+        <configuration>
+            <protocArtifact>com.google.protobuf:protoc:3.3.0:exe:${os.detected.classifier}</protocArtifact>
+            <pluginId>grpc-java</pluginId>
+            <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.4.0:exe:${os.detected.classifier}</pluginArtifact>
+        </configuration>
+        </plugin>
     </properties>
 
 </project>

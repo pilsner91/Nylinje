@@ -20,7 +20,7 @@ public class CreateItemTypeAdapterDB {
                 itemTypProto.getDimY(),
                 itemTypProto.getDimZ());
 
-        itemType result =iItemTypeDao.Create(typeOfItem);
+        itemType result = iItemTypeDao.Create(typeOfItem);
 
 
 

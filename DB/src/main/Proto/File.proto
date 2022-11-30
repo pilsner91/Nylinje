@@ -1,9 +1,5 @@
 syntax ="proto3";
-
-
 package GRPC.proto;
-
-
 
 service Serivce {
 

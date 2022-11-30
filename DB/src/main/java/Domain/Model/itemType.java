@@ -1,12 +1,12 @@
 package Domain.Model;
 
-public class itemType {
+public class ItemType {
     private int id;
     private Double dimX;
     private Double dimY;
     private Double dimZ;
 
-    public itemType(int id, Double dimX, Double dimY, Double dimZ) {
+    public ItemType(int id, Double dimX, Double dimY, Double dimZ) {
         this.id = id;
         this.dimX = dimX;
         this.dimY = dimY;

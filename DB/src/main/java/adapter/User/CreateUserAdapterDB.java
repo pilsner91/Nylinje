@@ -16,7 +16,7 @@ public class CreateUserAdapterDB
         User user = new User(userProto
                 .getId());
 
-        User result =UserDao.CreateUser(user);
+        User result = UserDao.CreateUser(user);
 
         File.UserProto newUserProto = File.UserProto.newBuilder()
                 .setId(result.getId())

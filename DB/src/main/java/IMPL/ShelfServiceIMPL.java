@@ -12,21 +12,12 @@ public class ShelfServiceIMPL extends SerivceGrpc.SerivceImplBase
 {
     @Override
     public void getShelf(File.ShelfSearchRequest itemRequest,
-                         StreamObserver<File.Shelf> itemResponds)
+                         StreamObserver<File.ShelfProto> itemResponds)
     {
         IGRPCDataBase converter = new GRPCDataBase() {
 
-
         };
-
-
-
-
-
     }
-
-
-
 }
 
 

@@ -4,25 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="roder med adapter pattern på serversiden">
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/ItemType.java" afterDir="false" />
+    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="ting">
+      <change afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/conver/itemProto/ConverItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/GRPCDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/GRPCDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/ItemType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/ItemType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/IGRPCDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/IGRPCDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/Item/CreateItemAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Item/CreateItemAdapterDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/ItemType/CreateItemTypeAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/ItemType/CreateItemTypeAdapterDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/User/CreateUserAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/User/CreateUserAdapterDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IItemTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IItemTypeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IUserDao.java" afterDir="false" />
-    </list>
-    <list id="2c67dbad-295e-4d5e-99fd-ae2dd09aa0b0" name="Changes by spam" comment="">
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IShelfDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IShelfDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,15 +46,6 @@
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="81ffe829-311a-4bde-8753-4e2da12b99da" />
-        <range start1="18" end1="19" start2="19" end2="20" changelist="81ffe829-311a-4bde-8753-4e2da12b99da" />
-        <range start1="24" end1="27" start2="25" end2="26" changelist="2c67dbad-295e-4d5e-99fd-ae2dd09aa0b0" />
-      </ranges>
-    </file>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="tiylsdnq" />
