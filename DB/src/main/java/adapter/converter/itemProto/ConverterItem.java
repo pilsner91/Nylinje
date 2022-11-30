@@ -5,7 +5,7 @@ import GRPC.proto.File.*;
 
 public class ConverterItem
 {
-  public static ItemTypeProto itemTypeToItemTypeProto(ItemType itemType)
+  public static ItemTypeProto itemType_To_ItemTypeProto(ItemType itemType)
   {
     return ItemTypeProto.newBuilder()
         .setId(itemType.getId())
