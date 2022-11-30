@@ -1,7 +1,7 @@
 package adapter.ItemType;
 
 
-import Domain.Model.itemType;
+import Domain.Model.ItemType;
 import GRPC.proto.File;
 import database.DaoInterface.IItemTypeDao;
 
@@ -14,13 +14,13 @@ public class CreateItemTypeAdapterDB {
 
     public File.ItemTypeProto CreateItemType(File.ItemTypeProto itemTypProto){
 
-        itemType typeOfItem = new itemType(
+        ItemType typeOfItem = new ItemType(
                 itemTypProto.getId(),
                 itemTypProto.getDimX(),
                 itemTypProto.getDimY(),
                 itemTypProto.getDimZ());
 
-        itemType result = iItemTypeDao.Create(typeOfItem);
+        ItemType result = iItemTypeDao.Create(typeOfItem);
 
 
 

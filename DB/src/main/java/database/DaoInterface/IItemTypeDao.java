@@ -1,11 +1,10 @@
 package database.DaoInterface;
 
-import Domain.Model.itemType;
-import GRPC.proto.File.*;
+import Domain.Model.ItemType;
 
 public interface IItemTypeDao {
-    itemType Create(itemType dto);
-    itemType Read(int dto);
-    itemType Update(itemType itemType);
+    ItemType Create(ItemType dto);
+    ItemType Read(int dto);
+    ItemType Update(ItemType itemType);
     /*public ItemType Remove(ItemTypeDeleteRequest dto);*/
 }

@@ -1,7 +1,6 @@
 package adapter.conver.itemProto;
 
 import Domain.Model.ItemType;
-import GRPC.proto.File;
 import GRPC.proto.File.*;
 
 public class ConverItem
