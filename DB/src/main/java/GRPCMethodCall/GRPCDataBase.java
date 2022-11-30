@@ -2,23 +2,25 @@
 package GRPCMethodCall;
 
 import Domain.Model.User;
+
 import GRPC.proto.File;
+import GRPC.proto.SerivceGrpc;
 import adapter.Shelf.GetShelfAdapterDB;
 import adapter.User.CreateUserAdapterDB;
 import database.DAOs.UserDao;
+import io.grpc.stub.StreamObserver;
+import net.devh.boot.grpc.server.service.GrpcService;
 
-import java.sql.SQLException;
-
-public class GRPCDataBase implements IGRPCDataBase {
+@GrpcService
+public class GRPCDataBase extends SerivceGrpc.SerivceImplBase {
 
     @Override
-    public File.ShelfProto ReadShelf(File.ShelfSearchRequest dao) {
+    public void getShelf(File.ShelfSearchRequest dao, StreamObserver<File.ShelfProto> itemResponds) {
         GetShelfAdapterDB shelfSelect = new GetShelfAdapterDB();
         File.ShelfProto shelfRespond = null;
 
         shelfRespond = GetShelfAdapterDB.shelfResponse(dao);
 
-        return shelfRespond;
     }
 
     @Override
