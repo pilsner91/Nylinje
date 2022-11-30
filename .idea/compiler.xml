@@ -16,7 +16,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Database" target="17" />
-      <module name="DB" target="17" />
       <module name="lagersystem" target="17" />
     </bytecodeTargetLevel>
   </component>
