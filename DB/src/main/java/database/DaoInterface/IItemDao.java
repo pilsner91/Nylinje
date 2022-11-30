@@ -1,5 +1,6 @@
 package database.DaoInterface;
 
+import Domain.Model.Item;
 import GRPC.proto.File.*;
 
 public interface IItemDao {

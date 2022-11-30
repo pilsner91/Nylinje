@@ -19,12 +19,6 @@ public class GetShelfAdapterDB {
     {
         Shelf result = iShelfDao.Read(shelfProto.getId());
         ArrayList<Item> itemResponses;
-
-
-
-
-
-
-
+return null;
     }
 }

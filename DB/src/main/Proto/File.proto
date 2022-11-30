@@ -31,9 +31,6 @@ message ShelfSearchRequest{
   int32 id = 1;
 }
 
-
-
-
 message ItemTypeCreationRequest{
   int32 id = 1;
   double ItemDimX = 2;

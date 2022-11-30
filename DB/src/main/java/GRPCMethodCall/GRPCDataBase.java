@@ -1,3 +1,4 @@
+/*
 package GRPCMethodCall;
 
 import Domain.Model.User;
@@ -61,3 +62,4 @@ public class GRPCDataBase implements IGRPCDataBase {
         return userRespond;
     }
 }
+*/
