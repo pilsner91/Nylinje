@@ -2,24 +2,24 @@ package Domain.Model;
 
 public class Item {
 
-    private itemType type;
+    private ItemType type;
     private int Uid;
     private User Owner;
     private Shelf shelf;
 
 
-    public Item(itemType type, int uid, User owner, Shelf shelf) {
+    public Item(ItemType type, int uid, User owner, Shelf shelf) {
         this.type = type;
         Uid = uid;
         Owner = owner;
         this.shelf = shelf;
     }
 
-    public itemType getType() {
+    public ItemType getType() {
         return type;
     }
 
-    public void setType(itemType type) {
+    public void setType(ItemType type) {
         this.type = type;
     }
 

@@ -39,9 +39,10 @@ message ShelfSearchRequest{
 
 
 message ItemTypeCreationRequest{
-  double ItemDimX = 1;
-  double ItemDimY = 2;
-  double ItemDimZ = 3;
+  int32 id = 1;
+  double ItemDimX = 2;
+  double ItemDimY = 3;
+  double ItemDimZ = 4;
 }
 
 message ItemTypeSearchRequest{

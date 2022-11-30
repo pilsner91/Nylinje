@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="småændringer">
+    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="roder med adapter pattern på serversiden">
+      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/ItemType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DB/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/GRPCDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/GRPCDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/IGRPCDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/IGRPCDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/Item/CreateItemAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Item/CreateItemAdapterDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/ItemType/CreateItemTypeAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/ItemType/CreateItemTypeAdapterDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/User/CreateUserAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/User/CreateUserAdapterDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IItemTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IItemTypeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IUserDao.java" afterDir="false" />
+    </list>
+    <list id="2c67dbad-295e-4d5e-99fd-ae2dd09aa0b0" name="Changes by spam" comment="">
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +39,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -40,6 +51,15 @@
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="81ffe829-311a-4bde-8753-4e2da12b99da" />
+        <range start1="18" end1="19" start2="19" end2="20" changelist="81ffe829-311a-4bde-8753-4e2da12b99da" />
+        <range start1="24" end1="27" start2="25" end2="26" changelist="2c67dbad-295e-4d5e-99fd-ae2dd09aa0b0" />
+      </ranges>
+    </file>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="tiylsdnq" />
@@ -63,13 +83,10 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/via/SEP3/SEP3NNNN/DB",
-    "spring.configuration.checksum": "784b19844970dc5cf752ba705c54a44e"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DB" />
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -118,8 +135,11 @@
       <workItem from="1667983292891" duration="316000" />
       <workItem from="1667985595356" duration="55000" />
       <workItem from="1667988886932" duration="611000" />
-      <workItem from="1669712224318" duration="6674000" />
-      <workItem from="1669796614529" duration="1693000" />
+      <workItem from="1669712224318" duration="1957000" />
+      <workItem from="1669797015296" duration="56000" />
+      <workItem from="1669797083192" duration="17000" />
+      <workItem from="1669797375966" duration="1860000" />
+      <workItem from="1669799263521" duration="3085000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit Java">
       <created>1667318961742</created>
@@ -170,12 +190,12 @@
       <option name="project" value="LOCAL" />
       <updated>1669710155051</updated>
     </task>
-    <task id="LOCAL-00008" summary="småændringer">
-      <created>1669727825877</created>
+    <task id="LOCAL-00008" summary="roder med adapter pattern på serversiden">
+      <created>1669725295210</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1669727825877</updated>
+      <updated>1669725295210</updated>
     </task>
     <option name="localTasksCounter" value="9" />
     <servers />
@@ -202,8 +222,8 @@
     <MESSAGE value="Projekt rename, da Mikkel pc er lårt" />
     <MESSAGE value="Pom.Xml update i nyt projekt" />
     <MESSAGE value="ting" />
-    <MESSAGE value="småændringer" />
-    <option name="LAST_COMMIT_MESSAGE" value="småændringer" />
+    <MESSAGE value="roder med adapter pattern på serversiden" />
+    <option name="LAST_COMMIT_MESSAGE" value="roder med adapter pattern på serversiden" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -5,7 +5,7 @@ import GRPC.proto.File;
 
 public interface IUserDao {
 
-    User CreateUser(File.CreateUserRequest dto);
+    User CreateUser(User dto);
 
 
 }

@@ -1,5 +1,6 @@
 package adapter.Shelf;
 
+import Domain.Model.Item;
 import GRPC.proto.File.*;
 import database.DaoInterface.IShelfDao;
 
@@ -16,7 +17,7 @@ public class GetShelfAdapterDB {
         this.shelfConnector = dao;
     }
 
-    public Shelf shelfResponse(ShelfSearchRequest shelfProto) throws SQLException
+    public ShelfProto shelfResponse(ShelfSearchRequest shelfProto) throws SQLException
     {
 
         Domain.Model.Shelf shelfDomain = shelfConnector.Read(shelfProto.getId());
