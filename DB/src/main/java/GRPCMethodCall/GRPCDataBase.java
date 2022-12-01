@@ -1,8 +1,10 @@
-/*
+
 package GRPCMethodCall;
 
 import Domain.Model.User;
 
+import DummyData.TestItemDao;
+import DummyData.TestItemType;
 import GRPC.proto.File;
 import GRPC.proto.SerivceGrpc;
 import adapter.Item.CreateItemAdapterDB;
@@ -15,7 +17,7 @@ import net.devh.boot.grpc.server.service.GrpcService;
 
 @GrpcService
 public class GRPCDataBase extends SerivceGrpc.SerivceImplBase {
-
+/*
     @Override
     public void getShelf(File.ShelfSearchRequest dao, StreamObserver<File.ShelfProto> shelfResponds) {
         GetShelfAdapterDB shelfSelect = new GetShelfAdapterDB();
@@ -35,18 +37,20 @@ public class GRPCDataBase extends SerivceGrpc.SerivceImplBase {
         shelfResponds.onNext(shelfRespond);
         shelfResponds.onCompleted();
     }
-
-
+*/
 
     @Override
-    public void createItemType(File.ItemTypeCreationRequest dao,  StreamObserver<File.ItemTypeProto> itemResponds) {
-        CreateItemTypeAdapterDB itemTypeAdapterDB = new CreateItemTypeAdapterDB();
+    public void createItemType(File.ItemTypeCreationRequest dao, StreamObserver<File.ItemTypeProto> itemResponds) {
+        CreateItemTypeAdapterDB itemTypeAdapterDB = new CreateItemTypeAdapterDB(TestItemType);
         File.ItemCreation itemTypeResponse = null;
 
         itemTypeResponse = CreateItemTypeAdapterDB.ItemTypeResponse(dao);
         itemResponds.onNext(itemTypeResponse);
         itemResponds.onCompleted();
     }
+}
+
+    /*
     @Override
     public void readItemType(File.ItemTypeSearchRequest dao,  StreamObserver<File.ItemTypeProto> itemTypeResponds) {
         ReadItemTypeAdapterDB itemAdapterDB = new ReadItemTypeAdapterDB();
