@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="I don't know why there is so many changes">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/converter/ShelfProto/ConverterShelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/converter/ShelfProto/ConverterShelf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/GRPCDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/GRPCDataBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DatabaseServerApplication">
+  <component name="RunManager">
     <configuration name="DatabaseServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="DatabaseServer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="me.via316455.databaseserver.DatabaseServerApplication" />

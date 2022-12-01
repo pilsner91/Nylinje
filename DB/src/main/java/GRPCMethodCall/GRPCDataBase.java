@@ -5,6 +5,8 @@ import Domain.Model.User;
 
 import GRPC.proto.File;
 import GRPC.proto.SerivceGrpc;
+import adapter.Item.CreateItemAdapterDB;
+import adapter.ItemType.CreateItemTypeAdapterDB;
 import adapter.Shelf.GetShelfAdapterDB;
 import adapter.User.CreateUserAdapterDB;
 import database.DAOs.UserDao;
@@ -15,53 +17,90 @@ import net.devh.boot.grpc.server.service.GrpcService;
 public class GRPCDataBase extends SerivceGrpc.SerivceImplBase {
 
     @Override
-    public void getShelf(File.ShelfSearchRequest dao, StreamObserver<File.ShelfProto> itemResponds) {
+    public void getShelf(File.ShelfSearchRequest dao, StreamObserver<File.ShelfProto> shelfResponds) {
         GetShelfAdapterDB shelfSelect = new GetShelfAdapterDB();
         File.ShelfProto shelfRespond = null;
 
-        shelfRespond = GetShelfAdapterDB.shelfResponse(dao);
+        shelfRespond = shelfSelect.shelfResponse(dao);
+        shelfResponds.onNext(shelfRespond);
+        shelfResponds.onCompleted();
+    }
+
+    @Override
+    public void updateShelf(File.ShelfProto dao, StreamObserver<File.ShelfProto> shelfResponds) {
+        UpdateShelfAdapterDB shelfSelect = new UpdateShelfAdapterDB();
+        File.ShelfProto shelfRespond = null;
+
+        shelfRespond = shelfSelect.shelfResponse(dao);
+        shelfResponds.onNext(shelfRespond);
+        shelfResponds.onCompleted();
+    }
+
+
+
+    @Override
+    public void createItemType(File.ItemTypeCreationRequest dao,  StreamObserver<File.ItemTypeProto> itemResponds) {
+        CreateItemTypeAdapterDB itemTypeAdapterDB = new CreateItemTypeAdapterDB();
+        File.ItemCreation itemTypeResponse = null;
+
+        itemTypeResponse = CreateItemTypeAdapterDB.ItemTypeResponse(dao);
+        itemResponds.onNext(itemTypeResponse);
+        itemResponds.onCompleted();
+    }
+    @Override
+    public void readItemType(File.ItemTypeSearchRequest dao,  StreamObserver<File.ItemTypeProto> itemTypeResponds) {
+        ReadItemTypeAdapterDB itemAdapterDB = new ReadItemTypeAdapterDB();
+        File.ItemProto itemTypeResponse = null;
+
+        itemTypeResponse = CreateItemTypeAdapterDB.ItemResponse(dao);
+        itemResponds.onNext(itemTypeResponse);
+        itemResponds.onCompleted();
+    }
+
+
+
+    @Override
+    public void readItem(File.ItemSearchRequest dao,  StreamObserver<File.ItemProto> itemResponds) {
+        GetItemAdapterDB itemAdapterDB = new GetItemAdapterDB();
+        File.ItemProto itemResponse = null;
+
+        itemResponse = CreateItemTypeAdapterDB.ItemResponse(dao);
+        itemResponds.onNext(itemResponse);
+        itemResponds.onCompleted();
+    }
+
+    @Override
+    public void createItem(File.ItemCreation dao,  StreamObserver<File.ItemProto> itemResponds) {
+        CreateItemAdapterDB itemAdapterDB = new CreateItemAdapterDB();
+        File.ItemProto itemResponse = null;
+
+        itemResponse = CreateItemTypeAdapterDB.ItemResponse(dao);
+        itemResponds.onNext(itemResponse);
+        itemResponds.onCompleted();
+    }
+
+    @Override
+    public void deleteItem(File.ItemSearchRequest dao, StreamObserver<File.ItemProto> itemResponds) {
+        DeleteItemAdapterDB itemAdapterDB = new DeleteItemAdapterDB();
+        File.ItemProto itemResponse = null;
+
+        itemResponse = CreateItemTypeAdapterDB.ItemResponse(dao);
+        itemResponds.onNext(itemResponse);
+        itemResponds.onCompleted();
 
     }
 
     @Override
-    public File.ShelfProto UpdateShelf(File.ShelfProto dao) {
-        return null;
-    }
-
-    @Override
-    public File.ItemTypeProto CreateItemType(File.ItemTypeCreationRequest dao) {
-        return null;
-    }
-
-    @Override
-    public File.ItemTypeProto ReadItem(File.ItemTypeSearchRequest dao) {
-        return null;
-    }
-
-    @Override
-    public File.ItemProto CreateItem(File.ItemCreation dao) {
-        return null;
-    }
-
-    @Override
-    public File.ItemProto ReadItem(File.ItemSearchRequest dao) {
-        return null;
-    }
-
-    @Override
-    public File.ItemProto DeleteItem(File.ItemSearchRequest dao) {
-        return null;
-    }
-
-    @Override
-    public File.UserProto CreateUser(File.UserProto dao) {
+    public void createUser(File.CreateUserRequest dao, StreamObserver<File.UserProto> userResponse) {
         CreateUserAdapterDB createUserAdapterDB = new CreateUserAdapterDB(null);
         File.UserProto userRespond = null;
 
 
         userRespond = createUserAdapterDB.CreateUser(dao);
 
-        return userRespond;
+        userResponse.onNext(userRespond);
+        userResponse.onCompleted();
+
     }
 }
 */
