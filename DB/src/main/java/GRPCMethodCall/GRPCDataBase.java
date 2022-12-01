@@ -3,7 +3,7 @@ package GRPCMethodCall;
 
 import Domain.Model.User;
 
-import DummyData.TestItemDao;
+import DummyData.TestItem;
 import DummyData.TestItemType;
 import GRPC.proto.File;
 import GRPC.proto.SerivceGrpc;
@@ -13,9 +13,9 @@ import adapter.Shelf.GetShelfAdapterDB;
 import adapter.User.CreateUserAdapterDB;
 import database.DAOs.UserDao;
 import io.grpc.stub.StreamObserver;
-import net.devh.boot.grpc.server.service.GrpcService;
+//import net.devh.boot.grpc.server.service.GrpcService;
 
-@GrpcService
+//@GrpcService
 public class GRPCDataBase extends SerivceGrpc.SerivceImplBase {
 /*
     @Override
@@ -41,14 +41,14 @@ public class GRPCDataBase extends SerivceGrpc.SerivceImplBase {
 
     @Override
     public void createItemType(File.ItemTypeCreationRequest dao, StreamObserver<File.ItemTypeProto> itemResponds) {
-        CreateItemTypeAdapterDB itemTypeAdapterDB = new CreateItemTypeAdapterDB(TestItemType);
-        File.ItemCreation itemTypeResponse = null;
+        CreateItemTypeAdapterDB itemTypeAdapterDB = new CreateItemTypeAdapterDB(new TestItemType());
+        File.ItemTypeProto itemTypeResponse = null;
 
-        itemTypeResponse = CreateItemTypeAdapterDB.ItemTypeResponse(dao);
+        itemTypeResponse = itemTypeAdapterDB.CreateItemType(dao);
         itemResponds.onNext(itemTypeResponse);
         itemResponds.onCompleted();
     }
-}
+
 
     /*
     @Override
@@ -72,17 +72,18 @@ public class GRPCDataBase extends SerivceGrpc.SerivceImplBase {
         itemResponds.onNext(itemResponse);
         itemResponds.onCompleted();
     }
-
+*/
     @Override
     public void createItem(File.ItemCreation dao,  StreamObserver<File.ItemProto> itemResponds) {
-        CreateItemAdapterDB itemAdapterDB = new CreateItemAdapterDB();
+        System.out.println("IM in create");
+        CreateItemAdapterDB itemAdapterDB = new CreateItemAdapterDB(new TestItem());
         File.ItemProto itemResponse = null;
 
-        itemResponse = CreateItemTypeAdapterDB.ItemResponse(dao);
+        itemResponse = itemAdapterDB.CreateItemProto(dao);
         itemResponds.onNext(itemResponse);
         itemResponds.onCompleted();
     }
-
+/*
     @Override
     public void deleteItem(File.ItemSearchRequest dao, StreamObserver<File.ItemProto> itemResponds) {
         DeleteItemAdapterDB itemAdapterDB = new DeleteItemAdapterDB();
@@ -106,5 +107,6 @@ public class GRPCDataBase extends SerivceGrpc.SerivceImplBase {
         userResponse.onCompleted();
 
     }
-}
+
 */
+}

@@ -24,4 +24,12 @@ public class ConverterItemType
         itemTypeProto.getDimY(),
         itemTypeProto.getDimZ());
   }
+
+  public static ItemType itemTypeCreationProto_To_ItemType(ItemTypeCreationRequest itemTypeProto)
+  {
+    return new ItemType(itemTypeProto.getId(),
+            itemTypeProto.getItemDimX(),
+            itemTypeProto.getItemDimY(),
+            itemTypeProto.getItemDimZ());
+  }
 }

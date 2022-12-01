@@ -1,5 +1,6 @@
 package adapter.converter.itemProto;
 
+import Domain.Dto.ItemCreateDto;
 import Domain.Model.Item;
 import Domain.Model.ItemType;
 import Domain.Model.Shelf;
@@ -36,6 +37,18 @@ public class ConverterItem
         itemProto.getUniqueID(),
         user,
         shelf
+    );
+
+  }
+
+  public static ItemCreateDto itemProtoCretion_to_Item(ItemCreation itemProto)
+  {
+
+
+    return new ItemCreateDto(
+            itemProto.getItemTypeID(),
+            itemProto.getOwnerID(),
+            itemProto.getShelfID()
     );
 
   }

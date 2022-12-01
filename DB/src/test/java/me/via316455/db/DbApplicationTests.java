@@ -1,3 +1,4 @@
+/*
 package me.via316455.db;
 
 import org.junit.jupiter.api.Test;
@@ -11,3 +12,5 @@ class DbApplicationTests {
     }
 
 }
+
+ */

@@ -14,9 +14,9 @@ public class CreateItemTypeAdapterDB {
     }
 
 
-    public File.ItemTypeProto CreateItemType(File.ItemTypeProto itemTypProto){
+    public File.ItemTypeProto CreateItemType(File.ItemTypeCreationRequest itemTypProto){
 
-        ItemType typeOfItem = ConverterItemType.itemTypeProto_To_ItemType(itemTypProto);
+        ItemType typeOfItem = ConverterItemType.itemTypeCreationProto_To_ItemType(itemTypProto);
 
         ItemType result = iItemTypeDao.Create(typeOfItem);
 

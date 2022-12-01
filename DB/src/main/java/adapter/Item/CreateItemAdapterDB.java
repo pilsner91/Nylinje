@@ -1,5 +1,6 @@
 package adapter.Item;
 
+import Domain.Dto.ItemCreateDto;
 import Domain.Model.Item;
 import GRPC.proto.File.*;
 import adapter.converter.ShelfProto.ConverterShelf;
@@ -16,11 +17,11 @@ public class CreateItemAdapterDB {
         this.iItemDao = iItemDao;
     }
 
-    public ItemProto CreateItemProto(ItemProto itemProto)
+    public ItemProto CreateItemProto(ItemCreation itemProto)
     {
-        Item item = ConverterItem.itemProto_to_Item(itemProto);
+        ItemCreateDto item = ConverterItem.itemProtoCretion_to_Item(itemProto);
 
-
+        System.out.println("Im ready to create");
         Item result = iItemDao.Create(item);
 
 

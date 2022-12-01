@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="Converter" />
+    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="Begin on testing sadly in main">
+      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Dto/ItemCreateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DB/src/main/java/DummyData/TestItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DB/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/DummyData/TestItemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/DummyData/TestItemType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/GRPCDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/GRPCDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/Item/CreateItemAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Item/CreateItemAdapterDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/ItemType/CreateItemTypeAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/ItemType/CreateItemTypeAdapterDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/converter/itemProto/ConverterItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/converter/itemProto/ConverterItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/converter/itemTypeProto/ConverterItemType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/converter/itemTypeProto/ConverterItemType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IItemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IItemDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/test/java/me/via316455/db/DbApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/test/java/me/via316455/db/DbApplicationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +34,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/GRPCDataBase.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -55,10 +72,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/DB" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75"
+  }
+}]]></component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -66,7 +87,14 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ConverterShelfTest.name">
+  <component name="RunManager" selected="Application.Database">
+    <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Database" />
+      <module name="DB" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConverterShelfTest.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DB" />
       <extension name="coverage">
@@ -99,6 +127,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Database" />
         <item itemvalue="JUnit.ConverterShelfTest.name" />
         <item itemvalue="JUnit.ConverterShelfTest.name" />
       </list>
