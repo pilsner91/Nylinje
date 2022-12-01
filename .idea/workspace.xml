@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="ting">
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/conver/itemProto/ConverItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="I don't know why there is so many changes">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/ItemType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Model/ItemType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/IGRPCDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/IGRPCDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/IMPL/ShelfServiceIMPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/ItemType/CreateItemTypeAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/ItemType/CreateItemTypeAdapterDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Shelf/GetShelfAdapterDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/User/CreateUserAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/User/CreateUserAdapterDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IShelfDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IShelfDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/converter/ShelfProto/ConverterShelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/converter/ShelfProto/ConverterShelf.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +23,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -198,7 +188,9 @@
     <MESSAGE value="Pom.Xml update i nyt projekt" />
     <MESSAGE value="ting" />
     <MESSAGE value="roder med adapter pattern på serversiden" />
-    <option name="LAST_COMMIT_MESSAGE" value="roder med adapter pattern på serversiden" />
+    <MESSAGE value="genskabt GRPCDataBase" />
+    <MESSAGE value="I don't know why there is so many changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="I don't know why there is so many changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

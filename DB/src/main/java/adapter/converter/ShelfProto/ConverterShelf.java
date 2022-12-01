@@ -16,14 +16,7 @@ public class ConverterShelf
   {
     ArrayList<ItemProto> itemProtos = new ArrayList<>();
 
-    ShelfProto result=ShelfProto.newBuilder()
-        .setRowNo(shelf.getRowNo())
-        .setShelfNo(shelf.getShelfNo())
-        .setShelfDimX(shelf.getDimX())
-        .setShelfDimY(shelf.getDimY())
-        .setShelfDimZ(shelf.getDimZ())
-        .addAllItemsOnShelf(itemProtos)
-        .build();
+
 
 
     for (Item item : shelf.getItemsOnShelf())
@@ -32,10 +25,17 @@ public class ConverterShelf
           .setType(ConverterItemType.itemType_To_ItemTypeProto(item.getType()))
           .setUniqueID(item.getUid())
           .setOwner(ConverterUser.User_To_UserProto(item.getOwner()))
-          .setShelf(result).build());
+          .build());
 
 
     }
+    ShelfProto result=ShelfProto.newBuilder()
+            .setRowNo(shelf.getRowNo())
+            .setShelfNo(shelf.getShelfNo())
+            .setShelfDimX(shelf.getDimX())
+            .setShelfDimY(shelf.getDimY())
+            .setShelfDimZ(shelf.getDimZ())
+            .build();
 
 
     return result;
