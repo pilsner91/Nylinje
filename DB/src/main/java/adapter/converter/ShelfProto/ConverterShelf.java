@@ -1,7 +1,9 @@
 package adapter.converter.ShelfProto;
 
 import Domain.Model.Item;
+import Domain.Model.ItemType;
 import Domain.Model.Shelf;
+import Domain.Model.User;
 import GRPC.proto.File.*;
 import adapter.converter.itemProto.ConverterItem;
 import adapter.converter.itemTypeProto.ConverterItemType;
@@ -15,9 +17,6 @@ public class ConverterShelf
   public static ShelfProto shelf_to_ShelfProto(Shelf shelf)
   {
     ArrayList<ItemProto> itemProtos = new ArrayList<>();
-
-
-
 
     for (Item item : shelf.getItemsOnShelf())
     {
@@ -40,4 +39,28 @@ public class ConverterShelf
 
     return result;
   }
+
+
+
+  public static Shelf shelfProto_To_shelf(ShelfProto shelfproto)
+  {
+    ArrayList<Item> items = new ArrayList<>();
+
+    Shelf shelf = new Shelf(shelfproto.getRowNo(),
+        shelfproto.getShelfNo(),
+        shelfproto.getShelfDimX(),
+        shelfproto.getShelfDimY(),
+        shelfproto.getShelfDimZ(),
+        items);
+
+    for (ItemProto item : shelfproto.getItemsOnShelfList())
+    {
+      ItemType itemType = ConverterItemType.itemTypeProto_To_ItemType(item.getType());
+      User user = ConverterUser.UserProto_To_User(item.getOwner());
+
+      items.add(new Item(itemType, item.getUniqueID(),user, shelf));
+    }
+    return shelf;
+  }
+
 }

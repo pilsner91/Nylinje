@@ -11,4 +11,10 @@ public class ConverterUser
         .setId(user.getId())
         .build();
   }
+
+
+  public static User UserProto_To_User(UserProto userProto)
+  {
+    return new User(userProto.getId());
+  }
 }

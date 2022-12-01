@@ -1,6 +1,9 @@
 package adapter.converter.itemProto;
 
 import Domain.Model.Item;
+import Domain.Model.ItemType;
+import Domain.Model.Shelf;
+import Domain.Model.User;
 import GRPC.proto.File.*;
 import adapter.converter.ShelfProto.ConverterShelf;
 import adapter.converter.itemTypeProto.ConverterItemType;
@@ -17,6 +20,24 @@ public class ConverterItem
         .setOwner(ConverterUser.User_To_UserProto(item.getOwner()))
         .setShelf(ConverterShelf.shelf_to_ShelfProto(item.getShelf()))
         .build();
+  }
+
+
+
+  public static Item itemProto_to_Item(ItemProto itemProto)
+  {
+    ItemType itemType = ConverterItemType.itemTypeProto_To_ItemType(itemProto.getType());
+    User user = ConverterUser.UserProto_To_User(itemProto.getOwner());
+    Shelf shelf = ConverterShelf.shelfProto_To_shelf(itemProto.getShelf());
+
+
+    return new Item(
+        itemType,
+        itemProto.getUniqueID(),
+        user,
+        shelf
+    );
+
   }
 }
 

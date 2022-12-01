@@ -3,6 +3,7 @@ package adapter.Shelf;
 import Domain.Model.Item;
 import Domain.Model.Shelf;
 import GRPC.proto.File.*;
+import adapter.converter.ShelfProto.ConverterShelf;
 import database.DaoInterface.IShelfDao;
 import java.util.ArrayList;
 
@@ -15,10 +16,11 @@ public class GetShelfAdapterDB {
         this.iShelfDao = dao;
     }
 
-    public ShelfProto shelfResponse(ShelfSearchRequest shelfProto)
+    public ShelfProto shelfResponse(ShelfSearchRequest shelfSRProto)
     {
-        Shelf result = iShelfDao.Read(shelfProto.getId());
-        ArrayList<Item> itemResponses;
-return null;
+        Shelf result = iShelfDao.Read(shelfSRProto.getId());
+
+        return ConverterShelf.shelf_to_ShelfProto(result);
+
     }
 }

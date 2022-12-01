@@ -15,6 +15,8 @@ public class ReadItemTypeAdapterDB
     this.iItemTypeDao = iItemTypeDao;
   }
 
+
+
   public ItemTypeProto readItemType(ItemTypeSearchRequest itemTypeSRProto)
   {
     ItemType itemType = iItemTypeDao.Read(itemTypeSRProto.getId());
