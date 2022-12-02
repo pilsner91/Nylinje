@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="Begin on testing sadly in main">
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/Domain/Dto/ItemCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/src/main/java/DummyData/TestItem.java" afterDir="false" />
+    <list default="true" id="81ffe829-311a-4bde-8753-4e2da12b99da" name="Changes" comment="Det virker Java var ikke et problem">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DB/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/DummyData/TestItemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/DummyData/TestItemType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/GRPCDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/GRPCMethodCall/GRPCDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/Item/CreateItemAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/Item/CreateItemAdapterDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/ItemType/CreateItemTypeAdapterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/ItemType/CreateItemTypeAdapterDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/converter/itemProto/ConverterItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/converter/itemProto/ConverterItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/adapter/converter/itemTypeProto/ConverterItemType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/adapter/converter/itemTypeProto/ConverterItemType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IItemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/java/database/DaoInterface/IItemDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/src/test/java/me/via316455/db/DbApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/test/java/me/via316455/db/DbApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" beforeDir="false" afterPath="$PROJECT_DIR$/DB/src/main/Proto/File.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +66,9 @@
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75"
+    "RequestMappingsPanelWidth1": "75",
+    "WebServerToolWindowFactoryState": "false",
+    "spring.configuration.checksum": "0a5a4d7386065c6c6ac19c303768c7e1"
   }
 }]]></component>
   <component name="RunDashboard">
@@ -152,6 +143,7 @@
       <workItem from="1669797083192" duration="17000" />
       <workItem from="1669797375966" duration="1860000" />
       <workItem from="1669799263521" duration="3085000" />
+      <workItem from="1669969052166" duration="320000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit Java">
       <created>1667318961742</created>
@@ -216,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669886287133</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Det virker Java var ikke et problem">
+      <created>1669905397731</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669905397731</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +244,8 @@
     <MESSAGE value="genskabt GRPCDataBase" />
     <MESSAGE value="I don't know why there is so many changes" />
     <MESSAGE value="Har genskabt den rigtige GRPC Database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Har genskabt den rigtige GRPC Database" />
+    <MESSAGE value="Det virker Java var ikke et problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Det virker Java var ikke et problem" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -10,7 +10,6 @@ service Serivce {
   rpc CreateItemType(ItemTypeCreationRequest) returns (ItemTypeProto);
   rpc ReadItemType(ItemTypeSearchRequest) returns (ItemTypeProto);
 
-  rpc GetItem(ItemSearchRequest) returns (ItemProto);
   rpc CreateItem(ItemCreation) returns (ItemProto);
   rpc ReadItem(ItemSearchRequest) returns (ItemProto);
   rpc DeleteItem(ItemSearchRequest) returns (ItemProto);
@@ -69,6 +68,7 @@ message ItemProto{
 
 
 message CreateUserRequest{
+  int32 id = 1;
 }
 
 message UserProto{
