@@ -22,8 +22,9 @@ public class ItemTypeController : ControllerBase
     {
         try
         {
-            itemType created = await itemManager.createItemAsync(dto);
-            return Created($"/ItemType/{created.Id}", created);
+            Console.WriteLine("here");
+            itemType created = await itemManager.createItemTypeAsync(dto);
+            return Created($"/itemtype/{created.Id}", created);
         }
         catch (Exception e)
         {

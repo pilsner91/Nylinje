@@ -1,7 +1,13 @@
 ﻿@page "/shelfpage"
 @using global::Shared.Model
 @using global::Shared.DTOs
+@using BlazerWASM.StateContainer
+@using HttpClients.ClientInterfaces
 @inject HttpClient Http
+
+@inject AddNewItemBeginState NewItemBeginState;
+@inject IItemService ItemService;
+@inject IItemTypeService ItemTypeService;
 
 <h3 class="text-center mb-5">ShelfPage</h3>
 
@@ -13,12 +19,12 @@
         <table class="table ">
             <tr>
                 <td class="border-1 text-center fw-bold">
-                    <label >Vare nummer</label>
+                    <label >Vare nummer: @NewItemBeginState.Id</label>
                 </td>
 
             </tr>
             <tr>
-                <td><label>Vare nummer</label> </td>
+                <td><label>antal du skal placere: @NewItemBeginState.Amount</label> </td>
             </tr>
             <tr>
                 <td>
@@ -59,6 +65,7 @@
     private int? ShelfId;
     private int? AvalibleCapacity;
     private int? InputWished;
+ //   private itemType _itemType = ItemTypeService.ReadAsync(NewItemBeginState.Id).Result;
 
 
 

@@ -1,3 +1,6 @@
+using ClientgRPC;
+using Logic.AdapterToGRPC.Item;
+using Logic.AdapterToGRPC.Shelf;
 using Logic.Logic;
 using Logic.LogicInterfaces;
 
@@ -10,6 +13,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IItemLogic, ItemManager>();
+
+builder.Services.AddScoped<IItemManager, ItemManager>();
+
+
+builder.Services.AddScoped<IItemClient, TypeMainAdapter>();
+builder.Services.AddScoped<IItemTypeClient, ItemTypeMainAdapter>();
+builder.Services.AddScoped<IShelfClient, ShelfClient>();
+
+builder.Services.AddScoped<IGRPCServerSide, GRPCServerSide>();
+
+
 
 var app = builder.Build();
 

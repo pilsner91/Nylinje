@@ -1,10 +1,12 @@
 ﻿@page "/CreateWare"
 @using HttpClients.ClientInterfaces
 @using global::Shared.DTOs
+@using BlazerWASM.StateContainer
 
 
 @inject IItemService Service;
 @inject NavigationManager NavigationManager;
+@inject AddNewItemBeginState NewItemBeginState;
 
 <h3>CreateWare</h3>
  <br/>
@@ -55,7 +57,9 @@
     {
         try
         {
-            
+            NewItemBeginState.Amount = (int)vareAntal;
+            NewItemBeginState.Id = (int)vareNummer;
+            NewItemBeginState.User = (int)kundeNummer;
             await Service.CreateAsync(new ItemCreationDto((int)vareNummer, (int)vareAntal, (int)kundeNummer,true,0));
             
             kundeNummer = null;
@@ -70,7 +74,7 @@
         {
             if (e.Message.Equals("ItemType not found"))
             {
-                NavigationManager.NavigateTo("/");
+                NavigationManager.NavigateTo("/CreateItemType");
             }
             
             Console.WriteLine(e);

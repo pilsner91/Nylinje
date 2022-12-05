@@ -6,4 +6,5 @@ namespace HttpClients.ClientInterfaces;
 public interface IItemTypeService
 {
     Task<itemType> CreateAsync(ItemTypeCreationDto dto);
+    Task<itemType> ReadAsync(int id);
 }

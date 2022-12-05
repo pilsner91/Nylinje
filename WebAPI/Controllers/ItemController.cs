@@ -20,6 +20,10 @@ public class ItemController : ControllerBase {
     public async Task<ActionResult<Item>> CreateAsync(ItemCreationDto dto) {
         try {
             Item item = await _itemLogic.CreateAsync(dto);
+            if (item.Type.Id!=dto.ItemTypeId)
+            {
+                return StatusCode(428, "ItemType not found");
+            }
             return Created($"/item/{item.Uid}", item);
         }
         catch (Exception e) {

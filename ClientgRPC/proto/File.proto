@@ -3,7 +3,7 @@ package GRPC.proto;
 
 
 
-service Serivces {
+service Serivce {
 
   rpc getShelf(ShelfSearchRequest) returns (ShelfProto);
   rpc UpdateShelf(ShelfProto) returns (ShelfProto);

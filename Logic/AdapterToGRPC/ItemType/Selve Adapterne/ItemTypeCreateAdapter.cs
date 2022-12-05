@@ -10,15 +10,19 @@ namespace Logic.AdapterToGRPC.Item;
 public class ItemTypeCreateAdapter
 {
     
-    private GRPCServerSide _grpcServerSide;
-    
+    private IGRPCServerSide _grpcServerSide;
+
+    public ItemTypeCreateAdapter(IGRPCServerSide grpcServerSide)
+    {
+        _grpcServerSide = grpcServerSide;
+    }
+
     public async Task<itemType>  CreateAdapter(ItemTypeCreationDto dto)
     {
-        ItemTypeCreationRequest itemCreationProto = new ItemTypeCreationRequest{DimX = dto.DimensionX, DimY = dto.DimenstionY, DimZ = dto.DimensionZ};
-        ItemTypeProto itemTypeProto = await _grpcServerSide.CreateItemTypeGRPC(itemCreationProto);
-        Shared.Model.itemType itemTypeDomain =
-            new itemType(itemCreationProto.Id, itemTypeProto.DimX, itemCreationProto.DimY, itemCreationProto.DimZ);
-
+        ItemTypeCreationRequest itemCreationProt = ConverterItemType.ItemTypeToItemTypeProto(dto);
+        ItemTypeProto itemTypeProto = await _grpcServerSide.CreateItemTypeGRPC(itemCreationProt);
+        Shared.Model.itemType itemTypeDomain = ConverterItemType.ItemTypeProtoToItemType(itemTypeProto);
+            
         return itemTypeDomain;
 
     }

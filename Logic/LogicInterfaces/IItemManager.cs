@@ -5,5 +5,6 @@ namespace Logic.LogicInterfaces;
 
 public interface IItemManager
 {
-    Task<itemType> createItemAsync(ItemTypeCreationDto dto);
+    Task<itemType> createItemTypeAsync(ItemTypeCreationDto dto);
+    
 }

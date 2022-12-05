@@ -1,19 +1,29 @@
-﻿using Logic.AdapterToGRPC.Item.Adapterne;
+﻿using ClientgRPC;
+using Logic.AdapterToGRPC.Item.Adapterne;
 using Shared.DTOs;
 
 namespace Logic.AdapterToGRPC.Item;
 
 public class TypeMainAdapter : IItemClient
 {
-    private ItemCreateAdapter _itemCreateAdapter = new ItemCreateAdapter();
-    private ReadItemAdp _readItemAdp = new ReadItemAdp();
-    private DeleteItemAdp _deleteItemAdp = new DeleteItemAdp();
+    private readonly ItemCreateAdapter _itemCreateAdapter;
+    private readonly ReadItemAdp _readItemAdp;
+    private readonly DeleteItemAdp _deleteItemAdp ;
 
 
-    public async Task<Shared.Model.Item> Create(ItemCreationDto dao)
+    public TypeMainAdapter(ItemCreateAdapter itemCreateAdapter, ReadItemAdp readItemAdp, DeleteItemAdp deleteItemAdp)
     {
+        _itemCreateAdapter = itemCreateAdapter;
+        _readItemAdp = readItemAdp;
+        _deleteItemAdp = deleteItemAdp;
+    }
 
-        return await _itemCreateAdapter.createItem(dao);
+    public async Task<Shared.Model.Item> Create(ItemCreationDto dto)
+    {
+        Console.WriteLine($"antal = +{dto.Antal}; shelfId = {dto.shelfId}; OwnerId = {dto.OwnerId}; ItemTypeId = {dto.ItemTypeId}");
+
+
+        return await _itemCreateAdapter.createItem(dto);
     }
 
     public async Task<Shared.Model.Item> Read(ItemSearchDto dao)

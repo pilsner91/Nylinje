@@ -23,4 +23,26 @@ public class ShelfHttpClient : IShelfService
         HttpResponseMessage response = await client.PatchAsync("/shelf/AddItem", body);
         return true;
     }
+
+    public async Task<List<Shelf>> getShelfs()
+    {
+        HttpResponseMessage response = await client.GetAsync("/Shelfs");
+        string content = await response.Content.ReadAsStringAsync();
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(content);
+        }
+
+        List<Shelf> shelves = JsonSerializer.Deserialize<List<Shelf>>(content, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        })!;
+        return shelves;
+    }
+
+  /*  public async Task<List<Shelf>> getShelfsAmount(int itemTypeId)
+    {
+        
+    }
+    */
 }

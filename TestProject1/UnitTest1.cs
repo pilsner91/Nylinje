@@ -1,4 +1,6 @@
+using System;
 using NUnit.Framework;
+using Shared.Model;
 
 namespace TestProject1;
 
@@ -14,6 +16,6 @@ public class Tests
     public void Test1()
     {
         
-        Assert.Pass();
+        
     }
 }

@@ -19,10 +19,6 @@ public class ItemHttpClient : IItemService {
         HttpResponseMessage response = await client.PostAsJsonAsync("/item", dto);
         string result = await response.Content.ReadAsStringAsync();
         
-        if (response.StatusCode == HttpStatusCode.NotFound)
-        {
-            throw new Exception("ItemType not found");
-        }
         if (!response.IsSuccessStatusCode)
         {
             

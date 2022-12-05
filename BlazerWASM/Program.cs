@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using BlazerWASM;
+using BlazerWASM.StateContainer;
 using HttpClients.ClientInterfaces;
 using HttpClients.Implementations;
 
@@ -11,6 +12,9 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddScoped<IItemService, ItemHttpClient>();
 builder.Services.AddScoped<IItemTypeService, ItemTypeHttpClient>();
+builder.Services.AddScoped<IShelfService, ShelfHttpClient>();
+
+builder.Services.AddSingleton<AddNewItemBeginState>();
 
 builder.Services.AddScoped(
     sp => 

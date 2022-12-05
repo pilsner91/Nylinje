@@ -17,7 +17,25 @@ public class ItemTypeHttpClient : IItemTypeService
     }
     public async Task<itemType> CreateAsync(ItemTypeCreationDto dto)
     {
-        HttpResponseMessage response = await client.PostAsJsonAsync("/itemsType", dto);
+        HttpResponseMessage response = await client.PostAsJsonAsync("/itemtype", dto);
+        string result = await response.Content.ReadAsStringAsync();
+        
+        if (!response.IsSuccessStatusCode)
+        {
+            
+            throw new Exception(result);
+        }
+
+        itemType itemType = JsonSerializer.Deserialize<itemType>(result, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        })!;
+        return itemType;
+    }
+    
+    public async Task<itemType> ReadAsync(int id)
+    {
+        HttpResponseMessage response = await client.GetAsync($"/itemtype/{id}");
         string result = await response.Content.ReadAsStringAsync();
         
         if (!response.IsSuccessStatusCode)

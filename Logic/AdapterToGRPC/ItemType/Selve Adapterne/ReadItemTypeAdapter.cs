@@ -7,14 +7,18 @@ namespace Logic.AdapterToGRPC.Item;
 
 public class ReadItemTypeAdapter
 {
-    private GRPCServerSide _grpcServerSide;
-    
+    private readonly IGRPCServerSide _grpcServerSide;
+
+    public ReadItemTypeAdapter(IGRPCServerSide grpcServerSide)
+    {
+        _grpcServerSide = grpcServerSide;
+    }
+
     public async Task<itemType> ReadItem(ItemTypeSearchDto dto)
     {
-        ItemTypeSearchRequest itemTypeSearch = new ItemTypeSearchRequest{Id = dto.id};
+        ItemTypeSearchRequest itemTypeSearch = ConverterItemType.ItemTypeSearchDtoToItemTypeSearchRequest(dto);
         ItemTypeProto itemTypeProto = await _grpcServerSide.SearchItemTypeGRPC(itemTypeSearch);
-        Shared.Model.itemType itemTypeDomain =
-            new itemType(itemTypeProto.Id, itemTypeProto.DimX, itemTypeProto.DimY, itemTypeProto.DimZ);
+        Shared.Model.itemType itemTypeDomain = ConverterItemType.ItemTypeProtoToItemType(itemTypeProto);
 
         return itemTypeDomain;
 

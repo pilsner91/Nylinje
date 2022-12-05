@@ -5,9 +5,15 @@ namespace Logic.AdapterToGRPC.Shelf;
 
 public class ShelfClient : IShelfClient
 {
-    private ReadShelfAdp _readShelfAdp = new ReadShelfAdp();
-    private UpdateShelfAdp _updateShelfAdp = new UpdateShelfAdp();
-    
+    private readonly ReadShelfAdp _readShelfAdp;
+    private readonly UpdateShelfAdp _updateShelfAdp;
+
+    public ShelfClient(ReadShelfAdp readShelfAdp, UpdateShelfAdp updateShelfAdp)
+    {
+        _readShelfAdp = readShelfAdp;
+        _updateShelfAdp = updateShelfAdp;
+    }
+
     public async Task<Shared.Model.Shelf> ReadShelf(ShelfSearchParametersDto dao)
     {
         return await _readShelfAdp.ReadShelf(dao);
