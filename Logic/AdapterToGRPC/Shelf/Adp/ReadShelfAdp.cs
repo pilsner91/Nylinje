@@ -8,17 +8,18 @@ namespace Logic.AdapterToGRPC.Shelf.Adp;
 
 public class ReadShelfAdp
 {
-    private readonly IGRPCServerSide _grpcServerSide;
-
-    public ReadShelfAdp(IGRPCServerSide grpcServerSide)
-    {
-        _grpcServerSide = grpcServerSide;
-    }
+    GRPCServerSide _grpcServerSide { get;set; }
 
     public async Task<Shared.Model.Shelf> ReadShelf(ShelfSearchParametersDto dao){
-        ShelfSearchRequest shelfSearchRequest = new ShelfSearchRequest{Id = dao.id};
-        ShelfProto shelfProto = await _grpcServerSide.ReadShelfAsync(shelfSearchRequest);
-        Shared.Model.Shelf shelf = ConverterShelf.ShelfProtoToShelf(shelfProto);
-        return shelf;
+    ShelfSearchRequest shelfSearchRequest = new ShelfSearchRequest{Id = dao.id};
+            ShelfProto shelfProto = await _grpcServerSide.ReadShelfAsync(shelfSearchRequest);
+
+            Shared.Model.Shelf shelf = ConverterShelf.ShelfProtoToShelf(shelfProto);
+            
+
+
+
+
+            return shelf;
     }
 }

@@ -15,7 +15,8 @@ public class Tests
     [Test]
     public void Test1()
     {
-        
+        User user= new User();
+        user.Id = 10;
         
     }
 }

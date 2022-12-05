@@ -25,6 +25,9 @@ builder.Services.AddScoped<IGRPCServerSide, GRPCServerSide>();
 
 
 
+
+
+
 var app = builder.Build();
 
 app.UseCors(x => x
