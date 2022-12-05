@@ -24,7 +24,7 @@ public class ShelfManager : IShelfManager
 
         foreach (AmountOnSpaceDto amount in list)
         {
-            
+            amount
         }
     }
 
