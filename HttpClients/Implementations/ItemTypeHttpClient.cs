@@ -17,7 +17,7 @@ public class ItemTypeHttpClient : IItemTypeService
     }
     public async Task<itemType> CreateAsync(ItemTypeCreationDto dto)
     {
-        HttpResponseMessage response = await client.PostAsJsonAsync("/itemtype", dto);
+        HttpResponseMessage response = await client.PostAsJsonAsync("/itemsType", dto);
         string result = await response.Content.ReadAsStringAsync();
         
         if (!response.IsSuccessStatusCode)
@@ -32,24 +32,5 @@ public class ItemTypeHttpClient : IItemTypeService
         })!;
         return itemType;
     }
-
-    public async Task<itemType> ReadAsync(ItemTypeSearchDto dto)
-    {
-        HttpResponseMessage response = await client.GetAsync($"/itemtype/{dto.Id}");
-        string result = await response.Content.ReadAsStringAsync();
-        
-        if (!response.IsSuccessStatusCode)
-        {
-            
-            throw new Exception(result);
-        }
-
-        itemType itemType = JsonSerializer.Deserialize<itemType>(result, new JsonSerializerOptions
-        {
-            PropertyNameCaseInsensitive = true
-        })!;
-        return itemType;
-    }
-    
 
 }
