@@ -23,4 +23,9 @@ public class ShelfClient : IShelfClient
     {
         return await _updateShelfAdp.UpdateShelf(dao);
     }
+
+    public Task<List<Shared.Model.Shelf>> GetAllShelves()
+    {
+        throw new NotImplementedException();
+    }
 }
