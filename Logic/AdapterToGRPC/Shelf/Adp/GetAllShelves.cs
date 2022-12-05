@@ -1,4 +1,5 @@
 ﻿using ClientgRPC;
+using GRPC.Proto;
 
 namespace Logic.AdapterToGRPC.Shelf.Adp;
 
@@ -13,6 +14,7 @@ public class GetAllShelves
 
     public List<Shared.Model.Shelf> getRequest()
     {
+        List<ShelfProto> shelfProtos = _grpcServerSide.GetAllShelfAsync();
         
     }
 }

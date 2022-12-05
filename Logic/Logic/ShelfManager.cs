@@ -1,5 +1,7 @@
-﻿using Logic.AdapterToGRPC.Shelf;
+﻿using Logic.AdapterToGRPC.Item;
+using Logic.AdapterToGRPC.Shelf;
 using Logic.LogicInterfaces;
+using Logic.UniversalBussniesClasses;
 using Shared.DTOs;
 using Shared.Model;
 
@@ -7,24 +9,39 @@ namespace Logic.Logic;
 
 public class ShelfManager : IShelfManager
 {
-    private ShelfClient _shelfClient;
+    private IShelfClient _shelfClient;
+    private IItemTypeClient _itemTypeClient;
 
-    public ShelfManager(ShelfClient shelfClient)
+    public ShelfManager(IShelfClient shelfClient, IItemTypeClient itemTypeClient)
     {
         _shelfClient = shelfClient;
+        _itemTypeClient = itemTypeClient;
     }
 
-    public Task<bool> Update(List<ShelfAddItemRequestDto> dtos)
+    public async Task<bool> Update(ShelfAddItemRequestDto dtos)
     {
-        throw new NotImplementedException();
+        List<AmountOnSpaceDto> list = await GetAmountOnShelf(dtos.ItemTypeId);
+
+        foreach (AmountOnSpaceDto amount in list)
+        {
+            
+        }
     }
 
-    public Task<List<AmountOnSpaceDto>> GetAmountOnShelf(int ItemTypeId)
+    public async Task<List<AmountOnSpaceDto>> GetAmountOnShelf(int itemTypeId)
     {
-        List<AmountOnSpaceDto> result = new List<AmountOnSpaceDto>();  
+        List<AmountOnSpaceDto> result = new List<AmountOnSpaceDto>();
+
         
-        
-        
-        return _shelfClient.
+
+        itemType _itemType = _itemTypeClient.Read(new ItemTypeSearchDto(itemTypeId)).Result;
+
+        List < Shelf > allShelves= await _shelfClient.GetAllShelves();
+        foreach (var shelf in allShelves)
+        {
+            result.Add(Amount.AmountOnSpaceDto(shelf, _itemType));
+        }
+
+        return result;
     }
 }

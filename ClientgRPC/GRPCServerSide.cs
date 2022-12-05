@@ -84,4 +84,8 @@ public class GRPCServerSide : IGRPCServerSide{
         return shelfProto;
     }
 
+    public Task<List<ShelfProto>> GetAllShelfAsync()
+    {
+        throw new NotImplementedException();
+    }
 }
