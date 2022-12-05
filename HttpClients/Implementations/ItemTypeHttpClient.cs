@@ -32,10 +32,10 @@ public class ItemTypeHttpClient : IItemTypeService
         })!;
         return itemType;
     }
-    
-    public async Task<itemType> ReadAsync(int id)
+
+    public async Task<itemType> ReadAsync(ItemTypeSearchDto dto)
     {
-        HttpResponseMessage response = await client.GetAsync($"/itemtype/{id}");
+        HttpResponseMessage response = await client.GetAsync($"/itemtype/{dto.Id}");
         string result = await response.Content.ReadAsStringAsync();
         
         if (!response.IsSuccessStatusCode)
@@ -50,5 +50,6 @@ public class ItemTypeHttpClient : IItemTypeService
         })!;
         return itemType;
     }
+    
 
 }

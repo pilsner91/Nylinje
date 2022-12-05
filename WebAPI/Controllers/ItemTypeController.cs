@@ -23,7 +23,22 @@ public class ItemTypeController : ControllerBase
         try
         {
             Console.WriteLine("here");
-            itemType created = await itemManager.createItemTypeAsync(dto);
+            itemType created = await itemManager.CreateItemTypeAsync(dto);
+            return Created($"/itemtype/{created.Id}", created);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+    
+    public async Task<ActionResult<itemType>> ReadAsync([FromBody] ItemTypeSearchDto dto)
+    {
+        try
+        {
+            Console.WriteLine("here");
+            itemType created = await itemManager.ReadItemTypeAsync(dto);
             return Created($"/itemtype/{created.Id}", created);
         }
         catch (Exception e)

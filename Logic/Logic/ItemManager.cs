@@ -1,6 +1,7 @@
 using Logic.AdapterToGRPC.Item;
 using Logic.AdapterToGRPC.Shelf;
 using Logic.LogicInterfaces;
+using Microsoft.AspNetCore.Http;
 using Shared.DTOs;
 using Shared.Model;
 
@@ -36,7 +37,7 @@ public class ItemManager : IItemLogic, IItemManager
         return result;
     }
 
-    public async Task<itemType> createItemTypeAsync(ItemTypeCreationDto dto)
+    public async Task<itemType> CreateItemTypeAsync(ItemTypeCreationDto dto)
     {
         if (dto.Id<1)
         {
@@ -60,5 +61,18 @@ public class ItemManager : IItemLogic, IItemManager
         return await _itemTypeClient.Create(dto);
     }
 
-
+    public async Task<itemType> ReadItemTypeAsync(ItemTypeSearchDto dto)
+    {
+        try
+        {
+            itemType result = await _itemTypeClient.Read(dto);
+            return result;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+    
 }
