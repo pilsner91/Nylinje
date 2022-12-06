@@ -84,8 +84,13 @@ public class GRPCServerSide : IGRPCServerSide{
         return shelfProto;
     }
 
-    public Task<List<ShelfProto>> GetAllShelfAsync()
+    public async Task<List<ShelfProto>> GetAllShelfAsync(getAllRequest dto)
     {
-        throw new NotImplementedException();
+        var _channel = GrpcChannel.ForAddress("http://localhost:9090");
+        var _shelf = new Serivce.SerivceClient(_channel);
+        ShelfProto shelfProto = await _shelf.(dto).;
+        return shelfProto;
     }
+
+
 }

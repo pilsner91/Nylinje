@@ -1,4 +1,5 @@
 ﻿using ClientgRPC;
+using Google.Protobuf.WellKnownTypes;
 using GRPC.Proto;
 
 namespace Logic.AdapterToGRPC.Shelf.Adp;
@@ -14,7 +15,8 @@ public class GetAllShelves
 
     public List<Shared.Model.Shelf> getRequest()
     {
-        List<ShelfProto> shelfProtos = _grpcServerSide.GetAllShelfAsync();
+        getAllRequest request = new getAllRequest();
+        List<ShelfProto> shelfProtos = _grpcServerSide.GetAllShelfAsync(request);
         
     }
 }

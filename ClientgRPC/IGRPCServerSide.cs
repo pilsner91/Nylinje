@@ -15,6 +15,6 @@ public interface IGRPCServerSide
     
     Task<ShelfProto> ReadShelfAsync(ShelfSearchRequest dao);
     Task<ShelfProto> UpdateSelfAsync(ShelfProto dao);
-    Task<List<ShelfProto>> GetAllShelfAsync();
+    Task<List<ShelfProto>> GetAllShelfAsync(getAllRequest dto);
 
 }
