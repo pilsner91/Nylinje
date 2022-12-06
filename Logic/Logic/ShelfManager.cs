@@ -38,8 +38,8 @@ public class ShelfManager : IShelfManager
             
             for (int i = 0; i < antalPåHylde.AvalibleSpace; i++)
             {
-                ItemCreationDto newItem = new ItemCreationDto(dtos.ItemTypeId,)
-                Item item = _itemClient.Create(I)
+                ItemCreationDto newItem = new ItemCreationDto(dtos.ItemTypeId, 1, dtos.Owner.Id
+                    , false, antalPåHylde.ShelfID);
             }
         }
 
