@@ -1,5 +1,6 @@
 using ClientgRPC;
 using Logic.AdapterToGRPC.Item;
+using Logic.AdapterToGRPC.ItemType;
 using Logic.AdapterToGRPC.Shelf;
 using Logic.Logic;
 using Logic.LogicInterfaces;
@@ -13,6 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IItemLogic, ItemManager>();
+
 
 builder.Services.AddScoped<IItemManager, ItemManager>();
 

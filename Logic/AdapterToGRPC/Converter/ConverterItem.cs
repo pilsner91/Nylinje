@@ -44,6 +44,6 @@ public class ConverterItem
     public static ItemCreation ItemCreationDtoToItemCreation(ItemCreationDto item)
     {
         return new GRPC.Proto.ItemCreation
-            { ItemTypeID = item.ItemTypeId, ShelfID = (int)item.shelfId, OwnerID = item.OwnerId };
+            { ItemTypeID = item.ItemTypeId, ShelfID = item.shelfId, OwnerID = item.OwnerId };
     }
 }

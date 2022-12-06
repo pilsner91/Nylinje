@@ -10,13 +10,13 @@ namespace Logic.AdapterToGRPC.Item;
 public class ItemTypeCreateAdapter
 {
     
-    private IGRPCServerSide _grpcServerSide;
-
+    private readonly IGRPCServerSide _grpcServerSide = new GRPCServerSide();
+/*
     public ItemTypeCreateAdapter(IGRPCServerSide grpcServerSide)
     {
         _grpcServerSide = grpcServerSide;
     }
-
+*/
     public async Task<itemType>  CreateAdapter(ItemTypeCreationDto dto)
     {
         ItemTypeCreationRequest itemCreationProt = ConverterItemType.ItemTypeToItemTypeProto(dto);

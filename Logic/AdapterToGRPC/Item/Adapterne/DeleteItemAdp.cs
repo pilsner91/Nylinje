@@ -8,7 +8,8 @@ namespace Logic.AdapterToGRPC.Item.Adapterne;
 
 public class DeleteItemAdp
 {
-    private GRPCServerSide _grpcServerSide = new GRPCServerSide();
+    private readonly IGRPCServerSide _grpcServerSide = new GRPCServerSide();
+    
 
     public async Task<Shared.Model.Item> Delete(ItemSearchDto dao)
     {

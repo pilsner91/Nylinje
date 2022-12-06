@@ -6,17 +6,19 @@ namespace Logic.AdapterToGRPC.Shelf.Adp;
 
 public class GetAllShelves
 {
-    private readonly IGRPCServerSide _grpcServerSide;
-
+    private readonly IGRPCServerSide _grpcServerSide = new GRPCServerSide();
+/*
     public GetAllShelves(IGRPCServerSide grpcServerSide)
     {
         _grpcServerSide = grpcServerSide;
     }
-
-    public List<Shared.Model.Shelf> getRequest()
+*/
+    public async Task<List<Shared.Model.Shelf>> GetRequest()
     {
         getAllRequest request = new getAllRequest();
-        List<ShelfProto> shelfProtos = _grpcServerSide.GetAllShelfAsync(request);
-        
+        ShelvesListProto shelfProtos = await _grpcServerSide.GetAllShelfAsync(request);
+        List<Shared.Model.Shelf> shelves = ConverterShelf.AllShelvesProtoToAllShelves(shelfProtos);
+
+        return shelves;
     }
 }

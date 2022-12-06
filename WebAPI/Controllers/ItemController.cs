@@ -1,3 +1,4 @@
+using Logic.Logic;
 using Logic.LogicInterfaces;
 using Microsoft.AspNetCore.Mvc;
 using Shared.DTOs;
@@ -9,7 +10,7 @@ namespace WebAPI.Controllers;
 [Route("[Controller]")]
 public class ItemController : ControllerBase {
 
-    private IItemLogic _itemLogic;
+    private IItemLogic _itemLogic = new ItemManager();
 
 
     public ItemController(IItemLogic itemLogic) {

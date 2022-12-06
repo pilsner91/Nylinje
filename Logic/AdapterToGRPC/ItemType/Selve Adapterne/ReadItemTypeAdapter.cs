@@ -7,13 +7,13 @@ namespace Logic.AdapterToGRPC.Item;
 
 public class ReadItemTypeAdapter
 {
-    private readonly IGRPCServerSide _grpcServerSide;
-
+    private readonly IGRPCServerSide _grpcServerSide = new GRPCServerSide();
+/*
     public ReadItemTypeAdapter(IGRPCServerSide grpcServerSide)
     {
         _grpcServerSide = grpcServerSide;
     }
-
+*/
     public async Task<itemType> ReadItem(ItemTypeSearchDto dto)
     {
         ItemTypeSearchRequest itemTypeSearch = ConverterItemType.ItemTypeSearchDtoToItemTypeSearchRequest(dto);

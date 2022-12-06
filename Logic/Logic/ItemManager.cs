@@ -1,4 +1,5 @@
 using Logic.AdapterToGRPC.Item;
+using Logic.AdapterToGRPC.ItemType;
 using Logic.AdapterToGRPC.Shelf;
 using Logic.LogicInterfaces;
 using Microsoft.AspNetCore.Http;
@@ -9,17 +10,17 @@ namespace Logic.Logic;
 
 public class ItemManager : IItemLogic, IItemManager
 {
-    IShelfClient _shelfClient;
-    IItemClient _itemClient; 
-    IItemTypeClient _itemTypeClient;
-
+    IShelfClient _shelfClient = new ShelfClient();
+    IItemClient _itemClient = new TypeMainAdapter(); 
+    IItemTypeClient _itemTypeClient = new ItemTypeMainAdapter();
+/*
     public ItemManager(IShelfClient shelfClient, IItemClient itemClient, IItemTypeClient itemTypeClient)
     {
         _shelfClient = shelfClient;
         _itemClient = itemClient;
         _itemTypeClient = itemTypeClient;
     }
-
+*/
     public async Task<Item> CreateAsync(ItemCreationDto dto)
     {
         if (dto.Antal<=0)

@@ -1,19 +1,15 @@
-﻿using Shared.DTOs;
+﻿using Logic.AdapterToGRPC.Item;
+using Shared.DTOs;
 using Shared.Model;
 
-namespace Logic.AdapterToGRPC.Item;
+namespace Logic.AdapterToGRPC.ItemType;
 
 public class ItemTypeMainAdapter: IItemTypeClient
 {
     
-    private readonly ItemTypeCreateAdapter saveadp;
-    private readonly ReadItemTypeAdapter readadp;
-
-    public ItemTypeMainAdapter(ItemTypeCreateAdapter saveadp, ReadItemTypeAdapter readadp)
-    {
-        this.saveadp = saveadp;
-        this.readadp = readadp;
-    }
+    private readonly ItemTypeCreateAdapter saveadp = new ();
+    private readonly ReadItemTypeAdapter readadp = new ();
+    
 
     public async Task<itemType> Create(ItemTypeCreationDto dto)
     {
@@ -24,8 +20,6 @@ public class ItemTypeMainAdapter: IItemTypeClient
     public async Task<itemType> Read(ItemTypeSearchDto dto)
     {
 
-        
- 
         return await readadp.ReadItem(dto);
     }
 }

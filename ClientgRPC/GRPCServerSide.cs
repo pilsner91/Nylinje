@@ -43,7 +43,6 @@ public class GRPCServerSide : IGRPCServerSide{
 
     public async Task<ItemProto> CreateItemGRPCAsync(ItemCreation dao)
     {
-        Console.WriteLine(dao);
         var _channel = GrpcChannel.ForAddress("http://localhost:9090");
         var _item = new Serivce.SerivceClient(_channel);
         ItemProto itemProto = await _item.CreateItemAsync(dao);
@@ -84,11 +83,11 @@ public class GRPCServerSide : IGRPCServerSide{
         return shelfProto;
     }
 
-    public async Task<List<ShelfProto>> GetAllShelfAsync(getAllRequest dto)
+    public async Task<ShelvesListProto> GetAllShelfAsync(getAllRequest dto)
     {
         var _channel = GrpcChannel.ForAddress("http://localhost:9090");
         var _shelf = new Serivce.SerivceClient(_channel);
-        ShelfProto shelfProto = await _shelf.(dto).;
+        ShelvesListProto shelfProto = await _shelf.getAllShelvesAsync(dto);
         return shelfProto;
     }
 

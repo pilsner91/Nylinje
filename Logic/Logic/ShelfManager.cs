@@ -1,6 +1,8 @@
 ﻿using System.Runtime.InteropServices;
+using ClientgRPC;
 using Logic.AdapterToGRPC.Item;
 using Logic.AdapterToGRPC.Shelf;
+using Logic.AdapterToGRPC.Shelf.Adp;
 using Logic.LogicInterfaces;
 using Logic.UniversalBussniesClasses;
 using Shared.DTOs;
@@ -10,8 +12,8 @@ namespace Logic.Logic;
 
 public class ShelfManager : IShelfManager
 {
-    private IShelfClient _shelfClient;
-    private IItemTypeClient _itemTypeClient;
+    private readonly IShelfClient _shelfClient;
+    private readonly IItemTypeClient _itemTypeClient;
     private IItemClient _itemClient;
 
     public ShelfManager(IShelfClient shelfClient, IItemTypeClient itemTypeClient, IItemClient itemClient)

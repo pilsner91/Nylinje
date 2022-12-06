@@ -33,11 +33,11 @@ public class ItemTypeController : ControllerBase
         }
     }
     
+    [HttpGet]
     public async Task<ActionResult<itemType>> ReadAsync([FromBody] ItemTypeSearchDto dto)
     {
         try
         {
-            Console.WriteLine("here");
             itemType created = await itemManager.ReadItemTypeAsync(dto);
             return Created($"/itemtype/{created.Id}", created);
         }

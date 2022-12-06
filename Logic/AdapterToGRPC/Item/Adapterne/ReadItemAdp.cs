@@ -8,7 +8,9 @@ namespace Logic.AdapterToGRPC.Item.Adapterne;
 
 public class ReadItemAdp
 {
-    GRPCServerSide _grpcServerSide { get;set; }
+    private readonly IGRPCServerSide _grpcServerSide = new GRPCServerSide();
+
+    
 
     public async Task<Shared.Model.Item> Read(ItemSearchDto dao)
     {
