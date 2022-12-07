@@ -64,11 +64,7 @@ public class ShelfManager : IShelfManager
 
         return result;
     }
-
-    public Task<bool> HasRoom(int ItemTypeId)
-    {
-        throw new NotImplementedException();
-    }
+    
 
     public async Task<bool> HasRoom(ShelfAddItemRequestDto dtos)
     {

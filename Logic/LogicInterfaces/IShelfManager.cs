@@ -9,5 +9,5 @@ public interface IShelfManager
 
     Task<List<AmountOnSpaceDto>> GetAmountOnShelf(int ItemTypeId);
 
-    Task<bool> HasRoom(int ItemTypeId);
+    Task<bool> HasRoom(ShelfAddItemRequestDto dto);
 }
